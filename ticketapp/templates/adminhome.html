@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+
+   <h1>Welcome Admin</h1>
+
+
+<style>
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+#ticket {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#ticket td, #ticket th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#ticket tr:nth-child(even){background-color: #f2f2f2;}
+
+#ticket tr:hover {background-color: #ddd;}
+
+#ticket th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="{% static 'js/adminhome.js' %} "></script>
+
+<body>
+<div id="1" style="margin-left-10%">
+	<h1>Open Tickets</h1>
+<table id="customers">
+	<thead>
+  <tr>
+    <th>Ticket ID</th>
+	  <th>Category</th>
+    <th>Subject</th>
+    <th>Description</th>
+	  <th>status</th>
+  </tr>
+	</thead>
+<tbody name="customer">
+  <!--<tr>-->
+    <!--<td>Ticket ID 1</td>-->
+    <!--<td>Laptop</td>-->
+    <!--<td>Damange</td>-->
+  <!--<td>Open</td>-->
+  <!--</tr>-->
+</tbody>
+</table>
+
+</div >
+<div>
+
+</div>
+
+<div class="2" style="margin-right=10%">
+<h1>Close tickets</h1>
+<table id="ticket">
+<thead>
+  <tr>
+    <th>Ticket ID</th>
+	  <th>Category</th>
+    <th>Subject</th>
+
+    <th>Description</th>
+	  <th>Status</th>
+  </tr>
+</thead>
+	<tbody name="tick">
+  <!--<tr>-->
+    <!--<td>Ticket ID 1</td>-->
+    <!--<td>Laptop</td>-->
+    <!--<td>Damange</td>-->
+  <!--<td>Open</td>-->
+  <!--</tr>-->
+	</tbody>
+</table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+{%  load staticfiles %}
+<meta charset="UTF-8">
+
+<title>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/iconic/css/material-design-iconic-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+   <h1>Welcome User</h1>
+
+
+<style>
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+#ticket {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#ticket td, #ticket th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#ticket tr:nth-child(even){background-color: #f2f2f2;}
+
+#ticket tr:hover {background-color: #ddd;}
+
+#ticket th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+
+</head>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="{% static 'js/userhome.js' %} "></script>
+
+<script>
+var email='{{Email}}'
+</script>
+<script src="{% static 'js/create.js' %} "></script>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+
+    <!--<table class="table table-dark">-->
+  <!--<thead>-->
+    <!--<tr>-->
+      <!--<th scope="col">#</th>-->
+      <!--<th scope="col">First</th>-->
+      <!--<th scope="col">Last</th>-->
+      <!--<th scope="col">Handle</th>-->
+    <!--</tr>-->
+  <!--</thead>-->
+  <!--<tbody>-->
+    <!--<tr>-->
+      <!--<th scope="row">1</th>-->
+      <!--<td>Mark</td>-->
+      <!--<td>Otto</td>-->
+      <!--<td>@mdo</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<th scope="row">2</th>-->
+      <!--<td>Jacob</td>-->
+      <!--<td>Thornton</td>-->
+      <!--<td>@fat</td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+      <!--<th scope="row">3</th>-->
+      <!--<td>Larry</td>-->
+      <!--<td>the Bird</td>-->
+      <!--<td>@twitter</td>-->
+    <!--</tr>-->
+  <!--</tbody>-->
+<!--</table>-->
+
+
+<div class="limiter">
+    <div class="container-login100">
+			<div class="wrap-login100">
+<body>
+
+
+
+
+
+
+<div id="1" style="margin-left-10%">
+	<h1>Open Tickets</h1>
+<table id="customers">
+	<thead>
+  <tr>
+    <th>Ticket ID</th>
+	  <th>Category</th>
+    <th>Subject</th>
+    <th>Description</th>
+	  <th>status</th>
+  </tr>
+	</thead>
+<tbody name="customer">
+  <!--<tr>-->
+    <!--<td>Ticket ID 1</td>-->
+    <!--<td>Laptop</td>-->
+    <!--<td>Damange</td>-->
+  <!--<td>Open</td>-->
+  <!--</tr>-->
+</tbody>
+</table>
+
+</div >
+<div>
+
+</div>
+
+<div class="2" style="margin-right=10%">
+<h1>Close tickets</h1>
+<table id="ticket">
+<thead>
+  <tr>
+    <th>Ticket ID</th>
+	  <th>Category</th>
+    <th>Subject</th>
+
+    <th>Description</th>
+	  <th>Status</th>
+  </tr>
+</thead>
+	<tbody name="tick">
+  <!--<tr>-->
+    <!--<td>Ticket ID 1</td>-->
+    <!--<td>Laptop</td>-->
+    <!--<td>Damange</td>-->
+  <!--<td>Open</td>-->
+  <!--</tr>-->
+	</tbody>
+</table>
+</div>
+
+</body>
+	<div class="text-center p-t-115">
+                    </div>
+
+
+     <span class="psw">Forgot <a href="/ticket/forget/">password?</a></span>
+         <div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/animsition/js/animsition.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/daterangepicker/moment.min.js' %}"></script>
+	<script src="{% static 'vendor/daterangepicker/daterangepicker.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/countdowntime/countdowntime.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'js/main.js' %}"></script>
+</div>
+    </div>
+</div>
+    </div><!-- /.container -->
+</html>
