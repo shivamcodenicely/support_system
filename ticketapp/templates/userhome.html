@@ -1,245 +1,398 @@
+<!--<!DOCTYPE html>-->
+<!--{% load staticfiles %}-->
+<!--<html lang="en">-->
+<!--<head>-->
+
+
+
+  <!--<title>Support System</title>-->
+
+  <!--<meta charset="utf-8">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <!--<style>-->
+        <!--.moholder {-->
+         <!--padding-left: 27px;-->
+
+    <!--</style>-->
+<!--</head>-->
+
+
+<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
+
+<!--<script src="{% static 'js/userhome.js' %} "></script>-->
+<!--<script src="{% static 'js/create_ticket.js' %} "></script>-->
+
+<!--<script>-->
+<!--var email='{{Email}}'-->
+<!--</script>-->
+
+
+
+<!--<body>-->
+<!--<h2 style="background-color:#E6E6FA">Welcome {{Email}} </h2>-->
+<!--<a href="/ticket/userlogout" style="margin-left=1210px;">logout</a>-->
+<!--&lt;!&ndash;<input type="submit" value="LOGOUT" style="background-color:#79aec8;margin-left:1220px;">&ndash;&gt;-->
+ <!--<img src="{% static 'img/blue_sea_water_background_187019.jpg' %}" alt="Smiley face" height="150" width="100%">-->
+<!--<div class="#" style="width:20px;height:20px;"></div>-->
+<!--<div class="container">-->
+
+  <!--&lt;!&ndash; Trigger the modal with a button &ndash;&gt;-->
+
+  <!--<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Create Ticket</button>-->
+
+  <!--&lt;!&ndash; Modal &ndash;&gt;-->
+  <!--<div class="modal fade" id="myModal" role="dialog">-->
+    <!--<div class="modal-dialog">-->
+
+      <!--&lt;!&ndash; Modal content&ndash;&gt;-->
+      <!--<div class="modal-content">-->
+        <!--<div class="modal-header">-->
+          <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+          <!--<h4 class="modal-title">Modal Header</h4>-->
+        <!--</div>-->
+        <!--<div class="moholder">-->
+          <!--<div class="row">-->
+      <!--<div class="col-25">-->
+        <!--<label for="ticket_id">Ticket ID</label>-->
+      <!--</div>-->
+      <!--<div class="col-75">-->
+        <!--<input type="text" id="ticket_id" name="ticket_id" placeholder="Ticket ID">-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<div class="col-25">-->
+        <!--<label for="category">Category</label>-->
+      <!--</div>-->
+      <!--<div class="col-75">-->
+        <!--<select id="category" name="category">-->
+          <!--<option value="0">Low</option>-->
+          <!--<option value="1">Medium</option>-->
+          <!--<option value="2">High</option>-->
+        <!--</select>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<div class="col-25">-->
+        <!--<label for="subject">Subject</label>-->
+      <!--</div>-->
+      <!--<div class="col-75">-->
+        <!--<textarea id="subject" name="subject" placeholder="Subject" style="height:30px;width:300px"></textarea>-->
+      <!--</div>-->
+    <!--</div>-->
+
+      <!--<div class="row">-->
+      <!--<div class="col-25">-->
+        <!--<label for="description">Description</label>-->
+      <!--</div>-->
+      <!--<div class="col-75">-->
+        <!--<textarea id="description" name="description" placeholder="Write something.." style="height:200px;width:500px"></textarea>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+      <!--<input type="submit" onclick="create_ticket()">-->
+    <!--</div>-->
+        <!--</div>-->
+        <!--<div class="modal-footer">-->
+          <!--<button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>-->
+        <!--</div>-->
+      <!--</div>-->
+
+    <!--</div>-->
+  <!--</div>-->
+
+<!--</div>-->
+
+
+
+<!--<div style="width:100%; margin:0 auto;">-->
+        <!--<div id="wrap">-->
+  <!--<div id="regbar" style="margin-left:20px;">-->
+    <!--<div id="navthing">-->
+      <!--<h2><a href="#" id="loginform">Close Ticket</a> | <a href="#" id="openform">Open Ticket</a></h2>-->
+    <!--<div class="login">-->
+      <!--<div class="arrow-up"></div>-->
+      <!--<div class="formholder">-->
+        <!--<div class="randompad">-->
+          <!--<div id="1" style="margin-left-10%">-->
+<!--<table id="customers" style="border-spacing: 5px; padding-7px" border="1px">-->
+	<!--<thead>-->
+  <!--<tr style=" background-color:#79aec8; margin-left: 300px;">-->
+    <!--<th>Ticket ID</th>-->
+	  <!--<th>Category</th>-->
+    <!--<th>Subject</th>-->
+    <!--<th>Description</th>-->
+  <!--</tr>-->
+	<!--</thead>-->
+<!--<tbody name="customer">-->
+  <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+    <!--&lt;!&ndash;<td>Ticket ID 1</td>&ndash;&gt;-->
+    <!--&lt;!&ndash;<td>Laptop</td>&ndash;&gt;-->
+    <!--&lt;!&ndash;<td>Damange</td>&ndash;&gt;-->
+  <!--&lt;!&ndash;<td>Open</td>&ndash;&gt;-->
+  <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+<!--</tbody>-->
+<!--</table>-->
+
+<!--</div >-->
+        <!--</div>-->
+      <!--</div>-->
+
+
+
+        <!--<div class="openticket">-->
+      <!--<div class="arrow-up"></div>-->
+      <!--<div class="formholder">-->
+        <!--<div class="randompad">-->
+          <!--<div id="2" style="margin-left-10%">-->
+<!--<table id="ticket" border="1px";>-->
+	<!--<thead>-->
+  <!--<tr style="background-color:#79aec8;">-->
+    <!--<th>Ticket ID</th>-->
+	  <!--<th>Category</th>-->
+    <!--<th>Subject</th>-->
+    <!--<th>Description</th>-->
+  <!--</tr>-->
+	<!--</thead>-->
+<!--<tbody name="customer">-->
+  <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+    <!--&lt;!&ndash;<td>Ticket ID 1</td>&ndash;&gt;-->
+    <!--&lt;!&ndash;<td>Laptop</td>&ndash;&gt;-->
+    <!--&lt;!&ndash;<td>Damange</td>&ndash;&gt;-->
+  <!--&lt;!&ndash;<td>Open</td>&ndash;&gt;-->
+  <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+<!--</tbody>-->
+<!--</table>-->
+
+<!--</div >-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<script src="{% static 'js/create.js' %} "></script>-->
+
+    <!--</div>-->
+<!--</div>-->
+
+<!--<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>-->
+<!--<script  src="{% static 'js/index.js' %}"></script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
 <!DOCTYPE html>
-<html lang="en">
-{%  load staticfiles %}
-<meta charset="UTF-8">
+{% load staticfiles %}
 
-<title>Login</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'fonts/iconic/css/material-design-iconic-font.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-
+<html>
+<title>User Home</title>
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
-   <h1>Welcome User</h1>
-
-
-<style>
-#customers {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-#customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-    padding-top: 6px;
-    padding-bottom: 6px;
-    text-align: left;
-    background-color: #4CAF50;
-    color: white;
-}
-
-
-#ticket {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-#ticket td, #ticket th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-#ticket tr:nth-child(even){background-color: #f2f2f2;}
-
-#ticket tr:hover {background-color: #ddd;}
-
-#ticket th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
-    color: white;
-}
-</style>
-
 </head>
-
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="{% static 'js/userhome.js' %} "></script>
-
 <script>
 var email='{{Email}}'
 </script>
-<script src="{% static 'js/create.js' %} "></script>
+<!--<script src="{% static 'css/css1.css' %}"></script>-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Launch demo modal
-</button>
+<script  src="{% static 'js/index.js' %}"></script>
+<header>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
+  <div class="container" style="width:100%">
+  <div class="jumbotron" style="padding-top: 10px;padding-bottom: 29px;">
+    <h1 style="padding-top:-33px;">Welcome {{Email}}</h1>
+    <p>Support System</p>
   </div>
 </div>
 
-<div class="container">
+</header>
 
 
-    <!--<table class="table table-dark">-->
-  <!--<thead>-->
-    <!--<tr>-->
-      <!--<th scope="col">#</th>-->
-      <!--<th scope="col">First</th>-->
-      <!--<th scope="col">Last</th>-->
-      <!--<th scope="col">Handle</th>-->
-    <!--</tr>-->
-  <!--</thead>-->
-  <!--<tbody>-->
-    <!--<tr>-->
-      <!--<th scope="row">1</th>-->
-      <!--<td>Mark</td>-->
-      <!--<td>Otto</td>-->
-      <!--<td>@mdo</td>-->
-    <!--</tr>-->
-    <!--<tr>-->
-      <!--<th scope="row">2</th>-->
-      <!--<td>Jacob</td>-->
-      <!--<td>Thornton</td>-->
-      <!--<td>@fat</td>-->
-    <!--</tr>-->
-    <!--<tr>-->
-      <!--<th scope="row">3</th>-->
-      <!--<td>Larry</td>-->
-      <!--<td>the Bird</td>-->
-      <!--<td>@twitter</td>-->
-    <!--</tr>-->
-  <!--</tbody>-->
-<!--</table>-->
-
-
-<div class="limiter">
-    <div class="container-login100">
-			<div class="wrap-login100">
 <body>
+<button type="button"  style="margin-left:2%;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Create Ticket</button>
 
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
 
-
-
-
-
-<div id="1" style="margin-left-10%">
-	<h1>Open Tickets</h1>
-<table id="customers">
-	<thead>
-  <tr>
-    <th>Ticket ID</th>
-	  <th>Category</th>
-    <th>Subject</th>
-    <th>Description</th>
-	  <th>status</th>
-  </tr>
-	</thead>
-<tbody name="customer">
-  <!--<tr>-->
-    <!--<td>Ticket ID 1</td>-->
-    <!--<td>Laptop</td>-->
-    <!--<td>Damange</td>-->
-  <!--<td>Open</td>-->
-  <!--</tr>-->
-</tbody>
-</table>
-
-</div >
-<div>
-
-</div>
-
-<div class="2" style="margin-right=10%">
-<h1>Close tickets</h1>
-<table id="ticket">
-<thead>
-  <tr>
-    <th>Ticket ID</th>
-	  <th>Category</th>
-    <th>Subject</th>
-
-    <th>Description</th>
-	  <th>Status</th>
-  </tr>
-</thead>
-	<tbody name="tick">
-  <!--<tr>-->
-    <!--<td>Ticket ID 1</td>-->
-    <!--<td>Laptop</td>-->
-    <!--<td>Damange</td>-->
-  <!--<td>Open</td>-->
-  <!--</tr>-->
-	</tbody>
-</table>
-</div>
-
-</body>
-	<div class="text-center p-t-115">
-                    </div>
-
-
-     <span class="psw">Forgot <a href="/ticket/forget/">password?</a></span>
-         <div id="dropDownSelect1"></div>
-
-<!--===============================================================================================-->
-	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
-<!--===============================================================================================-->
-	<script src="{% static 'vendor/animsition/js/animsition.min.js' %}"></script>
-<!--===============================================================================================-->
-	<script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
-	<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
-<!--===============================================================================================-->
-	<script src="{% static 'vendor/select2/select2.min.js' %}"></script>
-<!--===============================================================================================-->
-	<script src="{% static 'vendor/daterangepicker/moment.min.js' %}"></script>
-	<script src="{% static 'vendor/daterangepicker/daterangepicker.js' %}"></script>
-<!--===============================================================================================-->
-	<script src="{% static 'vendor/countdowntime/countdowntime.js' %}"></script>
-<!--===============================================================================================-->
-	<script src="{% static 'js/main.js' %}"></script>
-</div>
+      <!-- Modal content-->
+      <div class="modal-content" style="padding: 30px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Create New Ticket</h4>
+        </div>
+        <div class="moholder">
+          <div class="row">
+      <div class="col-25">
+        <label for="ticket_id">Ticket ID</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="ticket_id" name="ticket_id" placeholder="Ticket ID">
+      </div>
     </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="category">Category</label>
+      </div>
+      <div class="col-75">
+        <select id="category" name="category">
+          <option value="0">Low</option>
+          <option value="1">Medium</option>
+          <option value="2">High</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Subject" style="height:30px;width:300px"></textarea>
+      </div>
+    </div>
+
+      <div class="row">
+      <div class="col-25">
+        <label for="description">Description</label>
+      </div>
+      <div class="col-75">
+        <textarea id="description" name="description" placeholder="Write something.." style="height:200px;width:500px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" onclick="create_ticket()">
+    </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </div>
-    </div><!-- /.container -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="tab" role="tabpanel">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">Open Ticket</a></li>
+                    <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Close Ticket</a></li>
+<!--                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">Section 3</a></li>-->
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content tabs">
+                    <div role="tabpanel" class="tab-pane fade in active" id="Section1">
+                      <div class="card">
+                        <div class="card-body" style="text-align:center";>
+                          <table id="customers" style="border-spacing: 5px; text-align:center;" border="1px">
+	                        <thead>
+                              <tr style=" background-color:#79aec8; margin-left: 300px;">
+                                <th>Ticket ID</th>
+	                            <th>Category</th>
+                                <th>Subject</th>
+                                <th>Description</th>
+                                <th>Close Ticket</th>
+                              </tr>
+                            </thead>
+                            <tbody name="customer">
+                            <!--<tr>-->
+                              <!--<td>Ticket ID 1</td>-->
+                              <!--<td>Laptop</td>-->
+                              <!--<td>Damange</td>-->
+                            <!--<td>Open</td>-->
+                            <!--</tr>-->
+                          </tbody>
+                          </table>
+                        </div>
+                      </div>  
+    
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="Section2">
+                        <div class="card">
+                        <div class="card-body" style="text-align:center";>
+                          <table id="ticket" style="border-spacing: 5px; padding-7px;text-align:center; " border="1px">
+	                        <thead>
+                              <tr style=" background-color:#79aec8; margin-left: 300px;">
+                                <th>Ticket ID</th>
+	                            <th>Category</th>
+                                <th>Subject</th>
+                                <th>Description</th>
+                              </tr>
+                            </thead>
+                            <tbody name="ticket">
+                            <!--<tr>-->
+                              <!--<td>Ticket ID 1</td>-->
+                              <!--<td>Laptop</td>-->
+                              <!--<td>Damange</td>-->
+                            <!--<td>Open</td>-->
+                            <!--</tr>-->
+                          </tbody>
+                          </table>
+                        </div>
+                      </div> 
+                    </div>
+<!--                    <div role="tabpanel" class="tab-pane fade" id="Section3">-->
+<!--                        <h3>Section 3</h3>-->
+<!--                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>-->
+<!--                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="create" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content" style="padding: 30px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Ticket ID: <span id="ticket_id1"></span></h4>
+        </div>
+        <div class="moholder">
+      <div class="row">
+      <div class="col-25">
+        <label for="comment">Comment</label>
+      </div>
+      <div class="col-75">
+        <textarea id="comment" name="comment" placeholder="Write something.." style="height:70px;width:500px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Reply" onclick="reply()">
+    </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<script src="{% static 'js/userhome.js' %} "></script>
+<script src="{% static 'js/comment.js' %} "></script>
+</body>
+<footer>
+
+  <div class="container" style="width:100%" align="center">
+  <div class="jumbotron" style="padding-top: 10px;padding-bottom: 29px;">
+    <p>Thanks for your visit</p>
+  </div>
+</div>
+
+</footer>
 </html>

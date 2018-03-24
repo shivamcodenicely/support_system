@@ -3,6 +3,7 @@ from .models import Signup,TicketDetail,AdminSignup
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import send_mail
+import jwt
 from django.db import IntegrityError
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
@@ -63,10 +64,8 @@ def userhome(request):
     ticket_list1=[]
 
     if request.is_ajax() and request.method=="GET":
-        print('hello ajax')
+
         email = request.GET.get('email')
-        print ('hello code')
-        print(email)
         data = Signup.objects.get(email=email)
         # print(data)
         data1 = TicketDetail.objects.filter(user=data)
@@ -81,13 +80,10 @@ def userhome(request):
                 'status': i.status
             }
             ticket_list1.append(contxt)
-        print(ticket_list1)
         return JsonResponse({"success": True, 'ticket_list1': ticket_list1})
 
     elif request.method == "GET":
-        print("HELLO")
         email=request.GET.get('Email')
-        # print(email)
         return render(request, 'userhome.html',{'Email':email})
 
 
@@ -99,7 +95,6 @@ def adminlogin(request):
 def my_view(request):
     username = request.POST.get('username')
     password = request.POST.get('password')
-    print(username)
     data = AdminSignup.objects.get(username=username)
     pwd=data.password
     if(password==pwd):
@@ -150,7 +145,6 @@ def adminload(requset):
                     'status':i.status
                 }
                 ticket_list.append(contxt)
-            print(ticket_list)
 
         return JsonResponse({"success": True, 'ticket_list':ticket_list})
 
@@ -174,3 +168,46 @@ def adminload(requset):
 #         print(ticket_list1)
 #
 #     return JsonResponse({"success": True, 'ticket_list1': ticket_list1})
+
+@csrf_exempt
+def create_ticket(request):
+
+    if request.method=="POST":
+        email=request.POST.get('email')
+        ticket_id=request.POST.get('ticket_id')
+        catagory=request.POST.get('category')
+        subject=request.POST.get('subject')
+        description=request.POST.get('description')
+        data1=Signup.objects.get(email=email)
+        TicketDetail.objects.create(user=data1,ticket_id=ticket_id,catagory=catagory,subject=subject,description=description,status=True)
+
+
+        request.session['ticket_id'] = ticket_id
+        return JsonResponse({"success": True})
+
+def adminlogout(requset):
+    return render(requset,'adminlogin.html')
+
+def userlogout(requset):
+    return  render(requset,'userlogin.html')
+
+@csrf_exempt
+def comment(request):
+    if request.method=="POST":
+        ticket_id1=request.POST.get('ticket_id1')
+        comment=request.POST.get('comment')
+        data1=TicketDetail.objects.get(ticket_id=ticket_id1)
+        data1.comment=comment
+        data1.save()
+
+        return JsonResponse({"success":True})
+
+@csrf_exempt
+def close(request):
+    if request.method=="POST":
+        ticket_id=request.POST.get('ticket_id')
+        print(ticket_id)
+        data1=TicketDetail.objects.get(ticket_id=ticket_id)
+        data1.status=True
+        data1.save()
+        return JsonResponse({'success':True})

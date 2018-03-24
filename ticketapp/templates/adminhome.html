@@ -1,114 +1,265 @@
+<!--<!DOCTYPE html>-->
+<!--{% load staticfiles %}-->
+<!--<html lang="en">-->
+<!--<head>-->
+
+
+
+  <!--<title>Support System</title>-->
+
+  <!--<meta charset="utf-8">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <!--<style>-->
+        <!--.moholder {-->
+         <!--padding-left: 27px;-->
+
+    <!--</style>-->
+<!--</head>-->
+
+
+<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
+
+<!--<script src="{% static 'js/adminhome.js' %} "></script>-->
+
+
+<!--<input type="submit" name="Logout"style="margin-left:100%;">-->
+
+<!--<body>-->
+<!--<h2 style="background-color:#E6E6FA">Welcome Admin </h2>-->
+
+<!--&lt;!&ndash;<input type="submit"  value="LOGOUT" name="LOG OUT" style="background-color:#79aec8;margin-left:1220px;">&ndash;&gt;-->
+<!--<a href="/ticket/adminlogout" style="margin-left=1210px;">logout</a>-->
+ <!--<img src="{% static 'img/blue_sea_water_background_187019.jpg' %}" alt="Smiley face" height="150" width="100%">-->
+<!--<div class="#" style="width:20px;height:20px;"></div>-->
+<!--<div class="container">-->
+
+<!--<div style="width:100%; margin:0 auto;">-->
+        <!--<div id="wrap">-->
+  <!--<div id="regbar" style="margin-left:20px;">-->
+    <!--<div id="navthing">-->
+      <!--<h2><a href="#" id="loginform">Close Ticket</a> | <a href="#" id="openform">Open Ticket</a></h2>-->
+    <!--<div class="login">-->
+      <!--<div class="arrow-up"></div>-->
+      <!--<div class="formholder">-->
+        <!--<div class="randompad">-->
+          <!--<div id="1" style="margin-left-10%">-->
+<!--<table id="customers" style="border-spacing: 5px; padding-7px" border="1px">-->
+	<!--<thead>-->
+  <!--<tr style=" background-color:#79aec8; margin-left: 300px;">-->
+    <!--<th>Ticket ID</th>-->
+	  <!--<th>Category</th>-->
+    <!--<th>Subject</th>-->
+    <!--<th>Description</th>-->
+  <!--</tr>-->
+	<!--</thead>-->
+<!--<tbody name="customer">-->
+  <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+    <!--&lt;!&ndash;<td>Ticket ID 1</td>&ndash;&gt;-->
+    <!--&lt;!&ndash;<td>Laptop</td>&ndash;&gt;-->
+    <!--&lt;!&ndash;<td>Damange</td>&ndash;&gt;-->
+  <!--&lt;!&ndash;<td>Open</td>&ndash;&gt;-->
+  <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+<!--</tbody>-->
+<!--</table>-->
+
+<!--</div >-->
+        <!--</div>-->
+      <!--</div>-->
+
+
+
+        <!--<div class="openticket">-->
+      <!--<div class="arrow-up"></div>-->
+      <!--<div class="formholder">-->
+        <!--<div class="randompad">-->
+          <!--<div id="2" style="margin-left-10%">-->
+<!--<table id="ticket" border="1px";>-->
+	<!--<thead>-->
+  <!--<tr style="background-color:#79aec8;">-->
+    <!--<th>Ticket ID</th>-->
+	  <!--<th>Category</th>-->
+    <!--<th>Subject</th>-->
+    <!--<th>Description</th>-->
+  <!--</tr>-->
+	<!--</thead>-->
+<!--<tbody name="customer">-->
+  <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+    <!--&lt;!&ndash;<td>Ticket ID 1</td>&ndash;&gt;-->
+    <!--&lt;!&ndash;<td>Laptop</td>&ndash;&gt;-->
+    <!--&lt;!&ndash;<td>Damange</td>&ndash;&gt;-->
+  <!--&lt;!&ndash;<td>Open</td>&ndash;&gt;-->
+  <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+<!--</tbody>-->
+<!--</table>-->
+
+<!--</div >-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+    <!--</div>-->
+<!--</div>-->
+
+<!--<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>-->
+<!--<script  src="{% static 'js/index.js' %}"></script>-->
+
+<!--</body>-->
+<!--</html>-->
 <!DOCTYPE html>
 {% load staticfiles %}
+
 <html>
+<title>Admin Home</title>
 <head>
-
-   <h1>Welcome Admin</h1>
-
-
-<style>
-#customers {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-#customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-    padding-top: 6px;
-    padding-bottom: 6px;
-    text-align: left;
-    background-color: #4CAF50;
-    color: white;
-}
-
-
-#ticket {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-#ticket td, #ticket th {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-#ticket tr:nth-child(even){background-color: #f2f2f2;}
-
-#ticket tr:hover {background-color: #ddd;}
-
-#ticket th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
-    color: white;
-}
-</style>
 </head>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="{% static 'js/adminhome.js' %} "></script>
+<script>
+var email='{{Email}}'
+
+</script>
+<!--<script src="{% static 'css/css1.css' %}"></script>-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script  src="{% static 'js/index.js' %}"></script>
+<header>
+
+  <div class="container" style="width:100%">
+  <div class="jumbotron" style="padding-top: 10px;padding-bottom: 29px;">
+    <h1 style="padding-top:-33px;">Welcome {{Email}}</h1>
+    <p>Support System</p>
+  </div>
+</div>
+
+</header>
+
 
 <body>
-<div id="1" style="margin-left-10%">
-	<h1>Open Tickets</h1>
-<table id="customers">
-	<thead>
-  <tr>
-    <th>Ticket ID</th>
-	  <th>Category</th>
-    <th>Subject</th>
-    <th>Description</th>
-	  <th>status</th>
-  </tr>
-	</thead>
-<tbody name="customer">
-  <!--<tr>-->
-    <!--<td>Ticket ID 1</td>-->
-    <!--<td>Laptop</td>-->
-    <!--<td>Damange</td>-->
-  <!--<td>Open</td>-->
-  <!--</tr>-->
-</tbody>
-</table>
 
-</div >
-<div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="tab" role="tabpanel">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">Open Ticket</a></li>
+                    <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Close Ticket</a></li>
+<!--                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">Section 3</a></li>-->
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content tabs">
+                    <div role="tabpanel" class="tab-pane fade in active" id="Section1">
+                      <div class="card">
+                        <div class="card-body">
+                          <table id="customers" style="border-spacing: 5px; padding-7px;text-align:center" border="1px">
+	                        <thead>
+                              <tr style=" background-color:#79aec8; margin-left: 300px;">
+                                <th>Ticket ID</th>
+	                            <th>Category</th>
+                                <th>Subject</th>
+                                <th>Description</th>
+                                <th>Close Ticket</th>
+                              </tr>
+                            </thead>
+                            <tbody name="customer">
+                            <!--<tr>-->
+                              <!--<td>Ticket ID 1</td>-->
+                              <!--<td>Laptop</td>-->
+                              <!--<td>Damange</td>-->
+                            <!--<td>Open</td>-->
+                            <!--</tr>-->
+                          </tbody>
+                          </table>
+                        </div>
+                      </div>  
+    
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="Section2">
+                        <div class="card">
+                        <div class="card-body">
+                          <table id="ticket" style="border-spacing: 5px; padding-7px;text-align:center;" border="1px">
+	                        <thead>
+                              <tr style=" background-color:#79aec8; margin-left: 300px;">
+                                <th>Ticket ID</th>
+	                            <th>Category</th>
+                                <th>Subject</th>
+                                <th>Description</th>
+                              </tr>
+                            </thead>
+                            <tbody name="ticket">
+
+                            <!--<tr>-->
+                              <!--<td>Ticket ID 1</td>-->
+                              <!--<td>Laptop</td>-->
+                              <!--<td>Damange</td>-->
+                            <!--<td>Open</td>-->
+                            <!--</tr>-->
+                          </tbody>
+                          </table>
+                        </div>
+                      </div> 
+                    </div>
+<!--                    <div role="tabpanel" class="tab-pane fade" id="Section3">-->
+<!--                        <h3>Section 3</h3>-->
+<!--                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>-->
+<!--                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="create" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content" style="padding: 30px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Ticket ID: <span id="ticket_id1"></span></h4>
+
+        </div>
+        <div class="moholder">
+      <div class="row">
+      <div class="col-25">
+        <label for="comment">Comment</label>
+      </div>
+      <div class="col-75">
+        <textarea id="comment" name="comment" placeholder="Write something.." style="height:70px;width:500px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Reply" onclick="reply()">
+    </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 </div>
 
-<div class="2" style="margin-right=10%">
-<h1>Close tickets</h1>
-<table id="ticket">
-<thead>
-  <tr>
-    <th>Ticket ID</th>
-	  <th>Category</th>
-    <th>Subject</th>
-
-    <th>Description</th>
-	  <th>Status</th>
-  </tr>
-</thead>
-	<tbody name="tick">
-  <!--<tr>-->
-    <!--<td>Ticket ID 1</td>-->
-    <!--<td>Laptop</td>-->
-    <!--<td>Damange</td>-->
-  <!--<td>Open</td>-->
-  <!--</tr>-->
-	</tbody>
-</table>
-</div>
+<script src="{% static 'js/adminhome.js' %} "></script>
+<script src="{% static 'js/comment.js' %} "></script>
 
 </body>
+<footer>
+
+  <div class="container" style="width:100%" align="center">
+  <div class="jumbotron" style="padding-top: 10px;padding-bottom: 29px;">
+    <p>Thanks for your visit</p>
+  </div>
+</div>
+
+</footer>
 </html>

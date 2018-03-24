@@ -1,148 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
-{%  load staticfiles %}
-<meta charset="UTF-8">
+{% load staticfiles %}
 
-<title>Login</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="{% static 'images/icons/favicon.ico' %}"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'fonts/iconic/css/material-design-iconic-font.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css' %}">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-
+<html>
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
-
-
 </head>
+<script>
+var email='{{Email}}'
+</script>
+<script src="{% static 'css/css1.css' %}"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+<script  src="{% static 'js/index.js' %}"></script>
+<header>
 
-<body>
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
+  <div class="container" style="width:100%">
+  <div class="jumbotron" style="padding-top: 10px;padding-bottom: 29px;">
+    <h1 style="padding-top:-33px;">Welcome {{Email}}</h1>
+    <p>Support System</p>
   </div>
 </div>
 
-
-<table class="customers">
-  <thead>
-    <tr>
-      <th scope="col">Ticket_ID</th>
-      <th scope="col">Category</th>
-      <th scope="col">Subject</th>
-      <th scope="col">Description</th>
-        <th scope="col">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!--<tr>-->
-      <!--<th scope="row">1</th>-->
-      <!--<td>Mark</td>-->
-      <!--<td>Otto</td>-->
-      <!--<td>@mdo</td>-->
-    <!--</tr>-->
-      <!--<th scope="row">3</th>-->
-      <!--<td>Larry</td>-->
-      <!--<td>the Bird</td>-->
-      <!--<td>@twitter</td>-->
-    <!--</tr>-->
-  </tbody>
-</table>
+</header>
 
 
-<table class="Ticket">
-  <thead>
-    <tr>
-      <th scope="col">Ticket_ID</th>
-      <th scope="col">Category</th>
-      <th scope="col">Subject</th>
-      <th scope="col">Description</th>
-        <th scope="col">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!--<tr>-->
-      <!--<th scope="row">1</th>-->
-      <!--<td>Mark</td>-->
-      <!--<td>Otto</td>-->
-      <!--<td>@mdo</td>-->
-    <!--</tr>-->
-      <!--<th scope="row">3</th>-->
-      <!--<td>Larry</td>-->
-      <!--<td>the Bird</td>-->
-      <!--<td>@twitter</td>-->
-    <!--</tr>-->
-  </tbody>
-</table>
+<body>
+<button type="button"  style="margin-left:2%;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Create Ticket</button>
 
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content" style="padding: 30px;">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Modal Header</h4>
+        </div>
+        <div class="moholder">
+          <div class="row">
+      <div class="col-25">
+        <label for="ticket_id">Ticket ID</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="ticket_id" name="ticket_id" placeholder="Ticket ID">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="category">Category</label>
+      </div>
+      <div class="col-75">
+        <select id="category" name="category">
+          <option value="0">Low</option>
+          <option value="1">Medium</option>
+          <option value="2">High</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Subject" style="height:30px;width:300px"></textarea>
+      </div>
+    </div>
+
+      <div class="row">
+      <div class="col-25">
+        <label for="description">Description</label>
+      </div>
+      <div class="col-75">
+        <textarea id="description" name="description" placeholder="Write something.." style="height:200px;width:500px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" onclick="create_ticket()">
+    </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="tab" role="tabpanel">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">Section 1</a></li>
+                    <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Section 2</a></li>
+<!--                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">Section 3</a></li>-->
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content tabs">
+                    <div role="tabpanel" class="tab-pane fade in active" id="Section1">
+                      <div class="card">
+                        <div class="card-body">
+                          <table id="customers" style="border-spacing: 5px; padding-7px" border="1px">
+	                        <thead>
+                              <tr style=" background-color:#79aec8; margin-left: 300px;">
+                                <th>Ticket ID</th>
+	                            <th>Category</th>
+                                <th>Subject</th>
+                                <th>Description</th>
+                              </tr>
+                            </thead>
+                            <tbody name="customer">
+                            <!--<tr>-->
+                              <!--<td>Ticket ID 1</td>-->
+                              <!--<td>Laptop</td>-->
+                              <!--<td>Damange</td>-->
+                            <!--<td>Open</td>-->
+                            <!--</tr>-->
+                          </tbody>
+                          </table>
+                        </div>
+                      </div>  
+    
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="Section2">
+                        <div class="card">
+                        <div class="card-body">
+                          <table id="ticket" style="border-spacing: 5px; padding-7px" border="1px">
+	                        <thead>
+                              <tr style=" background-color:#79aec8; margin-left: 300px;">
+                                <th>Ticket ID</th>
+	                            <th>Category</th>
+                                <th>Subject</th>
+                                <th>Description</th>
+                              </tr>
+                            </thead>
+                            <tbody name="ticket">
+                            <!--<tr>-->
+                              <!--<td>Ticket ID 1</td>-->
+                              <!--<td>Laptop</td>-->
+                              <!--<td>Damange</td>-->
+                            <!--<td>Open</td>-->
+                            <!--</tr>-->
+                          </tbody>
+                          </table>
+                        </div>
+                      </div> 
+                    </div>
+<!--                    <div role="tabpanel" class="tab-pane fade" id="Section3">-->
+<!--                        <h3>Section 3</h3>-->
+<!--                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>-->
+<!--                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/userhome.js' %} "></script>
+<script src="{% static 'js/create_ticket.js' %} "></script>
 
 </body>
-<div class="text-center p-t-115">
-                    </div>
+<footer>
 
-
-     <span class="psw">Forgot <a href="/ticket/forget/">password?</a></span>
-         <div id="dropDownSelect1"></div>
-
-<!--===============================================================================================-->
-	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
-<!--===============================================================================================-->
-	<script src="{% static 'vendor/animsition/js/animsition.min.js' %}"></script>
-<!--===============================================================================================-->
-	<script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
-	<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
-<!--===============================================================================================-->
-	<script src="{% static 'vendor/select2/select2.min.js' %}"></script>
-<!--===============================================================================================-->
-	<script src="{% static 'vendor/daterangepicker/moment.min.js' %}"></script>
-	<script src="{% static 'vendor/daterangepicker/daterangepicker.js' %}"></script>
-<!--===============================================================================================-->
-	<script src="{% static 'vendor/countdowntime/countdowntime.js' %}"></script>
-<!--===============================================================================================-->
-	<script src="{% static 'js/main.js' %}"></script>
+  <div class="container" style="width:100%" align="center">
+  <div class="jumbotron" style="padding-top: 10px;padding-bottom: 29px;">
+    <p>Thanks for your visit</p>
+  </div>
 </div>
-    </div>
-</div>
-    </div><!-- /.container -->
-</html>
+
+</footer>
 </html>

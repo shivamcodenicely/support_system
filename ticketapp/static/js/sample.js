@@ -4,7 +4,6 @@
 
 
 function signup() {
-    alert("Welcome")
     var name = document.getElementById('name').value;
     var username = document.getElementById('username').value;
     var email = document.getElementById('email').value;
@@ -31,7 +30,6 @@ function signup() {
         dataType: 'json',
 
         success: function (contxt) {
-                 alert('success');
                  console.log(contxt)
                 if(contxt.success==true){
                     window.location.href = '/ticket/userlogin/';

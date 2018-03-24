@@ -13,6 +13,9 @@ urlpatterns = [
     url('forget/',views.forget_pass,name='forget_pass'),
     url('forget_function',views.new2,name='new2'),
     url('adminload',views.adminload,name='adminload'),
-    # url('userload',views.userload,name='userload')
-    url('z',views.z,name='z')
+    url('create_ticket',views.create_ticket,name='create_ticket'),
+    url('userlogout',views.userlogout,name='userlogout'),
+    url('adminlogout',views.adminlogout,name='adminlogout'),
+    url('comment',views.comment,name='comment'),
+    url('close',views.close,name='close'),
 ]

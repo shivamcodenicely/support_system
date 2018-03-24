@@ -3,7 +3,11 @@ from .models import Signup,AdminSignup,TicketDetail
 
 
 # Register your models here.
-
-admin.site.register(Signup)
+class SignupAdmin(admin.ModelAdmin):
+    list_display = ('name','email','username','address','city')
+admin.site.register(Signup,SignupAdmin)
 admin.site.register(AdminSignup)
-admin.site.register(TicketDetail)
+
+class TicketAdmin(admin.ModelAdmin):
+    list_display = ('user','ticket_id','subject','catagory','status')
+admin.site.register(TicketDetail,TicketAdmin)

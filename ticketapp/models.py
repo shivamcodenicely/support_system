@@ -13,7 +13,7 @@ class Signup(models.Model):
     profile_picture = models.ImageField(null=True, blank=True, upload_to='')
 
     def __str__(self):
-        return "%s-%s" % (self.name, self.city)
+        return "%s" % (self.name)
 
 
 class AdminSignup(models.Model):
@@ -38,5 +38,6 @@ class TicketDetail(models.Model):
     created=models.DateTimeField(auto_now=False,null=True,auto_now_add=True)
     modified=models.DateTimeField(auto_now=True,null=True,auto_now_add=False)
     status=models.BooleanField(default=False)
+    comment=models.CharField(max_length=256,null=True,blank=True)
     def __str__(self):
         return "%s" % (self.user)

@@ -1,6 +1,5 @@
 
                 $(document).ready(function(){
-                    alert('hi there');
 
                     $.ajax({
         url: '/ticket/userhome/',
@@ -20,14 +19,15 @@
                 var b=contxt.ticket_list1[i].catagory;
                 var c=contxt.ticket_list1[i].subject;
                 var d=contxt.ticket_list1[i].description;
+                var e="CLOSE";
 
                 if(data==true)
                 {
-                html+="<tr><td>"+a+"</td><td>"+b+"</td><td>"+c+"</td><td>"+d+"</td><td>"+data+"</td></tr>"
+                html+='<tr><td onclick="comment('+a+')">'+a+'</td><td>'+b+'</td><td>'+c+'</td><td>'+d+'</td><td onclick="close()">'+e+'</td></tr>'
                 }
 
                 else{
-                    html1+="<tr><td>"+a+"</td><td>"+b+"</td><td>"+c+"</td><td>"+d+"</td><td>"+data+"</td></tr>"
+                    html1+='<tr><td onclick="comment('+a+')">'+a+'</td><td>'+b+'</td><td>'+c+'</td><td>'+d+'</td></tr>'
                 }
                     }
                  $('#customers').append(html);
@@ -39,3 +39,41 @@
 
     });
 });
+
+
+function comment(id) {
+        document.getElementById('ticket_id1').textContent=id;
+        $('#create').modal('show');
+    }
+
+function close() {
+    alert('heeee')
+    document.getElementById('ticket_id1').textContent=id;
+     $.ajax({
+        url: '/ticket/close/',
+        type: 'POST',
+        data: {
+            'email': email, 'pwd': pwd,
+        },
+        dataType: 'json',
+        success: function (contxt) {
+            {
+                console.log(contxt)
+                console.log(contxt.success)
+
+                var Email=contxt.email
+                if(contxt.success==true){
+
+
+                    window.reload()
+                    }
+
+                else{
+                    alert("Email ID OR Password Incorrect")
+                }
+            }
+
+        }
+    });
+
+}

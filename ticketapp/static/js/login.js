@@ -1,5 +1,4 @@
 function login() {
-    alert("hellloooooooooo");
     var pwd = document.getElementById('pwd').value;
     var email = document.getElementById('email').value;
 
@@ -13,10 +12,9 @@ function login() {
         success: function (contxt) {
             {
                 console.log(contxt)
-                alert("Successful");
                 console.log(contxt.success)
+
                 var Email=contxt.email
-                alert(Email)
                 if(contxt.success==true){
 
 
@@ -34,7 +32,6 @@ function login() {
 
 
 function forget() {
-    alert("hellloooooooooo");
     var email = document.getElementById('email').value;
 
     $.ajax({
@@ -57,7 +54,6 @@ function forget() {
 
 
 function login1() {
-    alert("helllo");
     var password = document.getElementById('password').value;
     var username = document.getElementById('username').value;
 
@@ -71,10 +67,8 @@ function login1() {
         success: function (contxt) {
             {
                 console.log(contxt)
-                alert("Successful");
                 console.log(contxt.success)
                 Email=contxt.email
-                console.log(Email)
                 if(contxt.success==true){
 
 
