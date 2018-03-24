@@ -2,29 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91fdbfe8-c2e1-4f6e-a52e-b27e8234d669" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketapp/static/css/css1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ticketapp/static/js/comment.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ticketapp/static/js/create.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/support_system/urls.py" afterPath="$PROJECT_DIR$/support_system/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/admin.py" afterPath="$PROJECT_DIR$/ticketapp/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/models.py" afterPath="$PROJECT_DIR$/ticketapp/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/static/css/style.css" afterPath="$PROJECT_DIR$/ticketapp/static/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/static/js/adminhome.js" afterPath="$PROJECT_DIR$/ticketapp/static/js/adminhome.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/static/js/create_ticket.js" afterPath="$PROJECT_DIR$/ticketapp/static/js/create_ticket.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/static/js/index.js" afterPath="$PROJECT_DIR$/ticketapp/static/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/static/js/login.js" afterPath="$PROJECT_DIR$/ticketapp/static/js/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/static/js/sample.js" afterPath="$PROJECT_DIR$/ticketapp/static/js/sample.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/static/js/userhome.js" afterPath="$PROJECT_DIR$/ticketapp/static/js/userhome.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/static/scss/style.scss" afterPath="$PROJECT_DIR$/ticketapp/static/scss/style.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/templates/adminhome.html" afterPath="$PROJECT_DIR$/ticketapp/templates/adminhome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/templates/adminlogin.html" afterPath="$PROJECT_DIR$/ticketapp/templates/adminlogin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/templates/new.html" afterPath="$PROJECT_DIR$/ticketapp/templates/new.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/templates/sample.html" afterPath="$PROJECT_DIR$/ticketapp/templates/sample.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/templates/userhome.html" afterPath="$PROJECT_DIR$/ticketapp/templates/userhome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/templates/userlogin.html" afterPath="$PROJECT_DIR$/ticketapp/templates/userlogin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/urls.py" afterPath="$PROJECT_DIR$/ticketapp/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ticketapp/views.py" afterPath="$PROJECT_DIR$/ticketapp/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,8 +24,8 @@
       <file leaf-file-name="userhome.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticketapp/templates/userhome.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="356" column="0" lean-forward="true" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
+            <state relative-caret-position="249">
+              <caret line="391" column="7" lean-forward="true" selection-start-line="391" selection-start-column="7" selection-end-line="391" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#header#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#header#0;n#html#0;n#!!top" expanded="true" />
@@ -61,7 +42,7 @@
                 <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#13328#13335#0" expanded="true" />
+                <element signature="e#13395#13402#0" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#footer#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#footer#0;n#html#0;n#!!top" expanded="true" />
@@ -73,18 +54,8 @@
       <file leaf-file-name="userhome.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ticketapp/static/js/userhome.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adminhome.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ticketapp/static/js/adminhome.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="140" lean-forward="false" selection-start-line="23" selection-start-column="140" selection-end-line="23" selection-end-column="140" />
+            <state relative-caret-position="87">
+              <caret line="49" column="13" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -123,8 +94,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ticketapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="203" column="0" lean-forward="false" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
+            <state relative-caret-position="441">
+              <caret line="208" column="25" lean-forward="true" selection-start-line="208" selection-start-column="25" selection-end-line="208" selection-end-column="25" />
               <folding>
                 <element signature="e#3202#3222#0" expanded="false" />
                 <element signature="e#4383#4407#0" expanded="false" />
@@ -189,6 +160,7 @@
       <find>open</find>
       <find>form</find>
       <find>mode</find>
+      <find>crea</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -214,12 +186,12 @@
         <option value="$PROJECT_DIR$/ticketapp/admin.py" />
         <option value="$PROJECT_DIR$/ticketapp/models.py" />
         <option value="$PROJECT_DIR$/ticketapp/templates/adminhome.html" />
-        <option value="$PROJECT_DIR$/ticketapp/templates/userhome.html" />
         <option value="$PROJECT_DIR$/ticketapp/static/js/adminhome.js" />
         <option value="$PROJECT_DIR$/ticketapp/static/js/login.js" />
         <option value="$PROJECT_DIR$/ticketapp/static/js/comment.js" />
         <option value="$PROJECT_DIR$/ticketapp/urls.py" />
         <option value="$PROJECT_DIR$/ticketapp/views.py" />
+        <option value="$PROJECT_DIR$/ticketapp/templates/userhome.html" />
         <option value="$PROJECT_DIR$/ticketapp/static/js/userhome.js" />
       </list>
     </option>
@@ -598,13 +570,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ticketapp/templates/userlogin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="60" column="10" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="60" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ticketapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
@@ -643,7 +608,7 @@
             <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#13328#13335#0" expanded="true" />
+            <element signature="e#13395#13402#0" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#footer#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#footer#0;n#html#0;n#!!top" expanded="true" />
@@ -1020,17 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ticketapp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="203" column="0" lean-forward="false" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
-          <folding>
-            <element signature="e#3202#3222#0" expanded="false" />
-            <element signature="e#4383#4407#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ticketapp/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="603">
@@ -1047,10 +1001,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ticketapp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="208" column="25" lean-forward="true" selection-start-line="208" selection-start-column="25" selection-end-line="208" selection-end-column="25" />
+          <folding>
+            <element signature="e#3202#3222#0" expanded="false" />
+            <element signature="e#4383#4407#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ticketapp/templates/userhome.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="356" column="0" lean-forward="true" selection-start-line="356" selection-start-column="0" selection-end-line="356" selection-end-column="0" />
+        <state relative-caret-position="249">
+          <caret line="391" column="7" lean-forward="true" selection-start-line="391" selection-start-column="7" selection-end-line="391" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#div#0;n#header#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#header#0;n#html#0;n#!!top" expanded="true" />
@@ -1067,7 +1032,7 @@
             <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#13328#13335#0" expanded="true" />
+            <element signature="e#13395#13402#0" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#footer#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#footer#0;n#html#0;n#!!top" expanded="true" />
@@ -1075,10 +1040,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ticketapp/static/js/closed.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ticketapp/static/js/userhome.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        <state relative-caret-position="87">
+          <caret line="49" column="13" lean-forward="false" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
           <folding />
         </state>
       </provider>

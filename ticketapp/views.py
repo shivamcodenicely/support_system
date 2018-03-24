@@ -205,9 +205,9 @@ def comment(request):
 @csrf_exempt
 def close(request):
     if request.method=="POST":
-        ticket_id=request.POST.get('ticket_id')
-        print(ticket_id)
-        data1=TicketDetail.objects.get(ticket_id=ticket_id)
+        ticket_id2=request.POST.get('ticket_id2')
+        print(ticket_id2)
+        data1=TicketDetail.objects.get(ticket_id=ticket_id2)
         data1.status=True
         data1.save()
         return JsonResponse({'success':True})

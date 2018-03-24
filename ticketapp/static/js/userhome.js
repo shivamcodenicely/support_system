@@ -23,7 +23,7 @@
 
                 if(data==true)
                 {
-                html+='<tr><td onclick="comment('+a+')">'+a+'</td><td>'+b+'</td><td>'+c+'</td><td>'+d+'</td><td onclick="close()">'+e+'</td></tr>'
+                html+='<tr><td onclick="comment('+a+')">'+a+'</td><td>'+b+'</td><td>'+c+'</td><td>'+d+'</td><td onclick="closed('+a+')">'+e+'</td></tr>'
                 }
 
                 else{
@@ -46,14 +46,14 @@ function comment(id) {
         $('#create').modal('show');
     }
 
-function close() {
-    alert('heeee')
-    document.getElementById('ticket_id1').textContent=id;
+function closed(id) {
+    document.getElementById('ticket_id2').textContent=id;
+    alert(id)
      $.ajax({
         url: '/ticket/close/',
         type: 'POST',
         data: {
-            'email': email, 'pwd': pwd,
+            'ticket_id2':ticket_id2,
         },
         dataType: 'json',
         success: function (contxt) {

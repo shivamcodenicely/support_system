@@ -269,6 +269,7 @@ var email='{{Email}}'
     <div class="row">
       <input type="submit" onclick="create_ticket()">
     </div>
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
@@ -295,6 +296,7 @@ var email='{{Email}}'
                     <div role="tabpanel" class="tab-pane fade in active" id="Section1">
                       <div class="card">
                         <div class="card-body" style="text-align:center";>
+                          <input type="hidden" id="ticket_id2"/>
                           <table id="customers" style="border-spacing: 5px; text-align:center;" border="1px">
 	                        <thead>
                               <tr style=" background-color:#79aec8; margin-left: 300px;">
@@ -306,6 +308,7 @@ var email='{{Email}}'
                               </tr>
                             </thead>
                             <tbody name="customer">
+
                             <!--<tr>-->
                               <!--<td>Ticket ID 1</td>-->
                               <!--<td>Laptop</td>-->
@@ -385,6 +388,7 @@ var email='{{Email}}'
 </div>
 <script src="{% static 'js/userhome.js' %} "></script>
 <script src="{% static 'js/comment.js' %} "></script>
+<script src="{% static 'js/create_ticket.js' %} "></script>
 </body>
 <footer>
 
