@@ -17,15 +17,17 @@
                 var b=contxt.ticket_list[i].catagory;
                 var c=contxt.ticket_list[i].subject;
                 var d=contxt.ticket_list[i].description;
+                var d1=contxt.ticket_list[i].created;
+
                 var e="CLOSE";
 
                 if(data==true)
                 {
-                html+='<tr><td onclick="comment('+a+')">'+a+'</td><td>'+b+'</td><td>'+c+'</td><td>'+d+'</td><td on click="close()">'+e+'</td></tr>'
+                html+='<tr><td onclick="comment('+a+')">'+a+'</td><td>'+b+'</td><td>'+c+'</td><td>'+d+'</td><td>'+d1+'</td><td onclick="closed('+a+')">'+e+'</td></tr>'
                 }
 
                 else{
-                    html1+='<tr><td onclick="comment('+a+')">'+a+'</td><td>'+b+'</td><td>'+c+'</td><td>'+d+'</td></tr>'
+                    html1+='<tr><td onclick="comment('+a+')">'+a+'</td><td>'+b+'</td><td>'+c+'</td><td>'+d+'</td><td>'+d1+'</td></tr>'
                 }
                     }
                  $('#customers').append(html);
@@ -33,24 +35,32 @@
 
                 }
 
+               $(document).ready(function() {
+                    $('#table1').DataTable();
+                    $('#table2').DataTable();
+} );
+
+
             }
 
     });
 });
 
 function comment(id) {
-        document.getElementById('ticket_id1').textContent=id;
-        $('#create').modal('show');
+        window.location.href='/ticket/rply/?id='+id;
+//        document.getElementById('ticket_id2').textContent=id;
+//        $('#create').modal('show');
 
-    }
+}
 
-function close(){
-    alert('heeee')
+function closed(id){
+    alert('hello')
+ document.getElementById('ticket_id2').textContent=id;
     $.ajax({
         url: '/ticket/close/',
         type: 'POST',
         data: {
-            'status':True,
+            'ticket_id2':id,
 
         },
         dataType: 'json',
@@ -62,7 +72,7 @@ function close(){
                 location.reload()
                 }
                 else{
-                alert("This User is already exist");
+                alert("Ticket is already closed");
                 }
 
 

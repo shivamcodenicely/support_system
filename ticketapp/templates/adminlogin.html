@@ -36,18 +36,31 @@
 <script src="{% static 'js/login.js' %} "></script>
 
 
+<header style="width:110%; padding-left:0%;margin-left:0%;">
+
+  <div class="container" style="width:100%;padding:0; margin-left:0;max-width: 100%;">
+  <div class="jumbotron" style="padding-top: 10px;background-color:#26C1DE;padding-left:0;width:100%;">
+
+    <h1 style="padding-top:-33px; font-size: 2.5rem;color:#FFFFFF;margin-left:2%">Support System</h1>    <!--<p>Support System</p>-->
+  </div>
+</div>
+
+</header>
+<legend><center><h2 style="font-size: 1.5rem;"><b>Admin Login Form</b></h2></center></legend><br>
+
+<body>
     <div class="container">
 
-<div class="limiter">
+<div class="limiter" style="width:50%;">
 
-    <div class="container-login100">
-		<legend><center><h2 style="background-color:#E6E6FA"><b> Welcome to Admin Login </b></h2></center></legend><br>
+    <div class="container-login100"  style="min-height: 61vh;width: 80%; margin-left:10%;">
+		<!--<legend><center><h2 style="background-color:#E6E6FA"><b> Welcome to Admin Login </b></h2></center></legend><br>-->
 			<div class="wrap-login100">
     <div class="form-group">
     <div class="wrap-input100 validate-input">
         {% csrf_token %}
 						<input class="input100" type="text" name="email" id="username">
-						<span class="focus-input100" data-placeholder="Email" id="username"></span>
+						<span class="focus-input100" data-placeholder="Email Or Username" id="username"></span>
 					</div>
     </div>
     <div class="form-group">
@@ -63,17 +76,26 @@
 
  <div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
-							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn" onclick="login1()">
-								LOGIN
-							</button>
-						</div>
-</div>
+							<!--<div class="login100-form-bgbtn"></div>-->
+							<!--<button class="login100-form-btn" onclick="login1()">-->
+								<!--LOGIN-->
+							<!--</button>-->
+							<button type="button" class="btn btn-info" style="margin-left:38%;" onclick="login1()">LOGIN</button>
 
-					<div class="text-center p-t-115">
+						</div>
+					</div>
+
+					<div class="text-center p-t-30">
                     </div>
 
+			</div>
+	</div>
+</div>
+	</div>
 
+</body>
+<div class="text-center p-t-30">
+                    </div>
      <!--<span class="psw">Forgot <a href="/ticket/forget/">password?</a></span>-->
          <div id="dropDownSelect1"></div>
 
@@ -97,4 +119,14 @@
     </div>
 </div>
     </div><!-- /.container -->
+
+
+<footer>
+
+  <div class="container" style="width:100%;padding:0; margin:0;max-width: 100%;" align="center">
+  <div class="jumbotron" style="padding-top: 10px;padding-left:0;width:100%;background-color:#26C1DE; margin:0;">
+      <p>Thanks for your visit</p>
+  </div>
+</div>
+</footer>
 </html>

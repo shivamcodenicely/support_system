@@ -1,12 +1,11 @@
 from django.shortcuts import render
-from .models import Signup,TicketDetail,AdminSignup
+from .models import Signup,TicketDetail,AdminSignup,CommentBox
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import send_mail
 import jwt
+import crypt
 from django.db import IntegrityError
-from django.contrib.auth import authenticate, login
-from django.contrib.auth.models import User
 
 def usersignup(request):
     return render(request,'usersignup')
@@ -53,7 +52,7 @@ def validate(request):
         data = Signup.objects.get(email=email)
         email=data.email
         pwd=data.password
-        if(get_pwd==pwd):
+        if (get_pwd==pwd):
             request.session['email'] = email
             return JsonResponse({"email": email, "success": True})
         else:
@@ -77,9 +76,11 @@ def userhome(request):
                 'catagory': i.catagory,
                 'subject': i.subject,
                 'description': i.description,
-                'status': i.status
+                'status': i.status,
+                'created': (i.created.date().strftime('%d/%m/%Y'))
             }
             ticket_list1.append(contxt)
+            ticket_list1 = sorted(ticket_list1, key=lambda contxt: contxt['created'])
         return JsonResponse({"success": True, 'ticket_list1': ticket_list1})
 
     elif request.method == "GET":
@@ -142,10 +143,11 @@ def adminload(requset):
                     'catagory':i.catagory,
                     'subject':i.subject,
                     'description':i.description,
-                    'status':i.status
+                    'status':i.status,
+                    'created': (i.created.date().strftime('%d/%m/%Y'))
                 }
                 ticket_list.append(contxt)
-
+                ticket_list=sorted(ticket_list, key=lambda contxt: contxt['created'])
         return JsonResponse({"success": True, 'ticket_list':ticket_list})
 
 
@@ -186,9 +188,11 @@ def create_ticket(request):
         return JsonResponse({"success": True})
 
 def adminlogout(requset):
+    del requset.session['email']
     return render(requset,'adminlogin.html')
 
 def userlogout(requset):
+
     return  render(requset,'userlogin.html')
 
 @csrf_exempt
@@ -208,6 +212,31 @@ def close(request):
         ticket_id2=request.POST.get('ticket_id2')
         print(ticket_id2)
         data1=TicketDetail.objects.get(ticket_id=ticket_id2)
-        data1.status=True
+        data1.status=False
         data1.save()
         return JsonResponse({'success':True})
+
+@csrf_exempt
+def rply(request):
+    contxt ={}
+    if request.method=='GET':
+        id=request.GET.get('id')
+        data1=TicketDetail.objects.get(ticket_id=id)
+        contxt={ 'ticket_id':data1.ticket_id,
+                 'catagery':data1.catagory,
+                 'subject': data1.subject,
+                 'description':data1.description,
+        }
+
+    elif request.method=="POST":
+        ticket_id1=request.POST.get('ticket_id1')
+        comment=request.POST.get('comment')
+        data1=TicketDetail.objects.get(ticket_id=ticket_id1)
+        data2=CommentBox.objects.get(user=data1)
+
+
+        data3=CommentBox.objects.get(admin=data1)
+        # CommentBox.objects.create(comment=comment)
+
+
+    return render(request,'comment.html',{'contxt':contxt})

@@ -1,117 +1,4 @@
-<!--<!DOCTYPE html>-->
-<!--{% load staticfiles %}-->
-<!--<html lang="en">-->
-<!--<head>-->
 
-
-
-  <!--<title>Support System</title>-->
-
-  <!--<meta charset="utf-8">-->
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
-  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
-  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-    <!--<style>-->
-        <!--.moholder {-->
-         <!--padding-left: 27px;-->
-
-    <!--</style>-->
-<!--</head>-->
-
-
-<!--<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>-->
-
-<!--<script src="{% static 'js/adminhome.js' %} "></script>-->
-
-
-<!--<input type="submit" name="Logout"style="margin-left:100%;">-->
-
-<!--<body>-->
-<!--<h2 style="background-color:#E6E6FA">Welcome Admin </h2>-->
-
-<!--&lt;!&ndash;<input type="submit"  value="LOGOUT" name="LOG OUT" style="background-color:#79aec8;margin-left:1220px;">&ndash;&gt;-->
-<!--<a href="/ticket/adminlogout" style="margin-left=1210px;">logout</a>-->
- <!--<img src="{% static 'img/blue_sea_water_background_187019.jpg' %}" alt="Smiley face" height="150" width="100%">-->
-<!--<div class="#" style="width:20px;height:20px;"></div>-->
-<!--<div class="container">-->
-
-<!--<div style="width:100%; margin:0 auto;">-->
-        <!--<div id="wrap">-->
-  <!--<div id="regbar" style="margin-left:20px;">-->
-    <!--<div id="navthing">-->
-      <!--<h2><a href="#" id="loginform">Close Ticket</a> | <a href="#" id="openform">Open Ticket</a></h2>-->
-    <!--<div class="login">-->
-      <!--<div class="arrow-up"></div>-->
-      <!--<div class="formholder">-->
-        <!--<div class="randompad">-->
-          <!--<div id="1" style="margin-left-10%">-->
-<!--<table id="customers" style="border-spacing: 5px; padding-7px" border="1px">-->
-	<!--<thead>-->
-  <!--<tr style=" background-color:#79aec8; margin-left: 300px;">-->
-    <!--<th>Ticket ID</th>-->
-	  <!--<th>Category</th>-->
-    <!--<th>Subject</th>-->
-    <!--<th>Description</th>-->
-  <!--</tr>-->
-	<!--</thead>-->
-<!--<tbody name="customer">-->
-  <!--&lt;!&ndash;<tr>&ndash;&gt;-->
-    <!--&lt;!&ndash;<td>Ticket ID 1</td>&ndash;&gt;-->
-    <!--&lt;!&ndash;<td>Laptop</td>&ndash;&gt;-->
-    <!--&lt;!&ndash;<td>Damange</td>&ndash;&gt;-->
-  <!--&lt;!&ndash;<td>Open</td>&ndash;&gt;-->
-  <!--&lt;!&ndash;</tr>&ndash;&gt;-->
-<!--</tbody>-->
-<!--</table>-->
-
-<!--</div >-->
-        <!--</div>-->
-      <!--</div>-->
-
-
-
-        <!--<div class="openticket">-->
-      <!--<div class="arrow-up"></div>-->
-      <!--<div class="formholder">-->
-        <!--<div class="randompad">-->
-          <!--<div id="2" style="margin-left-10%">-->
-<!--<table id="ticket" border="1px";>-->
-	<!--<thead>-->
-  <!--<tr style="background-color:#79aec8;">-->
-    <!--<th>Ticket ID</th>-->
-	  <!--<th>Category</th>-->
-    <!--<th>Subject</th>-->
-    <!--<th>Description</th>-->
-  <!--</tr>-->
-	<!--</thead>-->
-<!--<tbody name="customer">-->
-  <!--&lt;!&ndash;<tr>&ndash;&gt;-->
-    <!--&lt;!&ndash;<td>Ticket ID 1</td>&ndash;&gt;-->
-    <!--&lt;!&ndash;<td>Laptop</td>&ndash;&gt;-->
-    <!--&lt;!&ndash;<td>Damange</td>&ndash;&gt;-->
-  <!--&lt;!&ndash;<td>Open</td>&ndash;&gt;-->
-  <!--&lt;!&ndash;</tr>&ndash;&gt;-->
-<!--</tbody>-->
-<!--</table>-->
-
-<!--</div >-->
-        <!--</div>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-  <!--</div>-->
-<!--</div>-->
-
-
-    <!--</div>-->
-<!--</div>-->
-
-<!--<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>-->
-<!--<script  src="{% static 'js/index.js' %}"></script>-->
-
-<!--</body>-->
-<!--</html>-->
 <!DOCTYPE html>
 {% load staticfiles %}
 
@@ -119,29 +6,32 @@
 <title>Admin Home</title>
 <head>
 </head>
-<script>
-var email='{{Email}}'
-
-</script>
 <!--<script src="{% static 'css/css1.css' %}"></script>-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
+<script src=" https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+
+
 
 <script  src="{% static 'js/index.js' %}"></script>
-<header>
+<header style="width:100%;">
+<div class="container" style="width:100%;padding:0; margin-left:0;max-width: 100%;">
+  <div class="jumbotron" style="padding-top: 10px;background-color:#26C1DE;padding-left:0;width:100%;">
 
-  <div class="container" style="width:100%">
-  <div class="jumbotron" style="padding-top: 10px;padding-bottom: 29px;">
-    <h1 style="padding-top:-33px;">Welcome {{Email}}</h1>
-    <p>Support System</p>
+    <h1 style="padding-top:-33px; font-size: 2.5rem;color:#FFFFFF;margin-left:2%">Support System</h1>
+      <span class="psw" style="color:##FFFFFF; margin-left:85%"><a href="/ticket/userlogout/" style="padding-left:2%"> LOGOUT</a></span>
+      <!--<p>Support System</p>-->
   </div>
 </div>
 
 </header>
 
-
-<body>
+<body style="font-size: 1.4rem;">
 
 <div class="container">
     <div class="row">
@@ -156,53 +46,108 @@ var email='{{Email}}'
                 <!-- Tab panes -->
                 <div class="tab-content tabs">
                     <div role="tabpanel" class="tab-pane fade in active" id="Section1">
-                      <div class="card">
+                      <div class="card" style="width:180%;">
                         <div class="card-body">
-                          <table id="customers" style="border-spacing: 5px; padding-7px;text-align:center" border="1px">
-	                        <thead>
-                              <tr style=" background-color:#79aec8; margin-left: 300px;">
-                                <th>Ticket ID</th>
-	                            <th>Category</th>
-                                <th>Subject</th>
-                                <th>Description</th>
-                                <th>Close Ticket</th>
-                              </tr>
-                            </thead>
-                            <tbody name="customer">
-                            <!--<tr>-->
-                              <!--<td>Ticket ID 1</td>-->
-                              <!--<td>Laptop</td>-->
-                              <!--<td>Damange</td>-->
-                            <!--<td>Open</td>-->
-                            <!--</tr>-->
-                          </tbody>
-                          </table>
+                            <!--<input type="hidden" id="ticket_id2"/>-->
+                          <!--<table id="customers" style="border-spacing: 5px; padding-7px;text-align:center" border="1px">-->
+	                        <!--<thead>-->
+                              <!--<tr style=" background-color:#79aec8; margin-left: 300px;">-->
+                                <!--<th>Ticket ID</th>-->
+	                            <!--<th>Category</th>-->
+                                <!--<th>Subject</th>-->
+                                <!--<th>Description</th>-->
+                                <!--<th>Created Date</th>-->
+                                <!--<th>Close Ticket</th>-->
+                              <!--</tr>-->
+                            <!--</thead>-->
+                            <!--<tbody name="customer">-->
+                            <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+                              <!--&lt;!&ndash;<td>Ticket ID 1</td>&ndash;&gt;-->
+                              <!--&lt;!&ndash;<td>Laptop</td>&ndash;&gt;-->
+                              <!--&lt;!&ndash;<td>Damange</td>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>Open</td>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+                          <!--</tbody>-->
+                          <!--</table>-->
+                        <!--</div>-->
+                      <!--</div>  -->
+<!--    -->
+<!--                    </div>-->
+<!--                    <div role="tabpanel" class="tab-pane fade" id="Section2">-->
+<!--                        <div class="card">-->
+                        <!--<div class="card-body">-->
+                          <!--<table id="ticket" style="border-spacing: 5px; padding-7px;text-align:center;" border="1px">-->
+	                        <!--<thead>-->
+                              <!--<tr style=" background-color:#79aec8; margin-left: 300px;">-->
+                                <!--<th>Ticket ID</th>-->
+	                            <!--<th>Category</th>-->
+                                <!--<th>Subject</th>-->
+                                <!--<th>Description</th>-->
+                                <!--<th>Created Date</th>-->
+                              <!--</tr>-->
+                            <!--</thead>-->
+                            <!--<tbody name="ticket">-->
+
+                            <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+                              <!--&lt;!&ndash;<td>Ticket ID 1</td>&ndash;&gt;-->
+                              <!--&lt;!&ndash;<td>Laptop</td>&ndash;&gt;-->
+                              <!--&lt;!&ndash;<td>Damange</td>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<td>Open</td>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+                          <!--</tbody>-->
+                          <!--</table>-->
+                            <input type="hidden" id="ticket_id2"/>
+                            <table id="table1" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Ticket ID</th>
+                <th>Category</th>
+                <th>Subject</th>
+                <th>Description</th>
+                <th>Created Date</th>
+                <th>Close Ticket</th>
+            </tr>
+        </thead>
+        <tbody id="customers">
+            <!--<tr>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+            <!--</tr>-->
+        </tbody>
+                        </table>
                         </div>
                       </div>  
     
                     </div>
                     <div role="tabpanel" class="tab-pane fade" id="Section2">
-                        <div class="card">
-                        <div class="card-body">
-                          <table id="ticket" style="border-spacing: 5px; padding-7px;text-align:center;" border="1px">
-	                        <thead>
-                              <tr style=" background-color:#79aec8; margin-left: 300px;">
-                                <th>Ticket ID</th>
-	                            <th>Category</th>
-                                <th>Subject</th>
-                                <th>Description</th>
-                              </tr>
-                            </thead>
-                            <tbody name="ticket">
-
-                            <!--<tr>-->
-                              <!--<td>Ticket ID 1</td>-->
-                              <!--<td>Laptop</td>-->
-                              <!--<td>Damange</td>-->
-                            <!--<td>Open</td>-->
-                            <!--</tr>-->
-                          </tbody>
-                          </table>
+                        <div class="card" style="width:180%;">
+                        <div class="card-body" style="text-align:center";>
+                          <input type="hidden">
+                            <table id="table2" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Ticket ID</th>
+                <th>Category</th>
+                <th>Subject</th>
+                <th>Description</th>
+                <th>Created Date</th>
+            </tr>
+        </thead>
+        <tbody id="ticket">
+            <!--<tr>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+                <!--<td></td>-->
+            <!--</tr>-->
+        </tbody>
+                        </table>
                         </div>
                       </div> 
                     </div>
@@ -254,12 +199,11 @@ var email='{{Email}}'
 
 </body>
 <footer>
+<div class="container" style="width:100%;padding:0; margin:0;max-width: 100%;" align="center">
+  <div class="jumbotron" style="padding-top: 10px;padding-left:0;width:100%;background-color:#26C1DE; margin:0;">
 
-  <div class="container" style="width:100%" align="center">
-  <div class="jumbotron" style="padding-top: 10px;padding-bottom: 29px;">
     <p>Thanks for your visit</p>
   </div>
 </div>
-
 </footer>
 </html>

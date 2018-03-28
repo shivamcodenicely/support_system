@@ -19,21 +19,27 @@
                 var b=contxt.ticket_list1[i].catagory;
                 var c=contxt.ticket_list1[i].subject;
                 var d=contxt.ticket_list1[i].description;
+                var d1=contxt.ticket_list1[i].created;
                 var e="CLOSE";
+
 
                 if(data==true)
                 {
-                html+='<tr><td onclick="comment('+a+')">'+a+'</td><td>'+b+'</td><td>'+c+'</td><td>'+d+'</td><td onclick="closed('+a+')">'+e+'</td></tr>'
+                html+='<tr><td onclick="comment('+a+')">'+a+'</td><td>'+b+'</td><td>'+c+'</td><td>'+d+'</td><td>'+d1+'</td><td onclick="closed('+a+')">'+e+'</td></tr>'
                 }
 
                 else{
-                    html1+='<tr><td onclick="comment('+a+')">'+a+'</td><td>'+b+'</td><td>'+c+'</td><td>'+d+'</td></tr>'
+                    html1+='<tr><td onclick="comment('+a+')">'+a+'</td><td>'+b+'</td><td>'+c+'</td><td>'+d+'</td><td>'+d1+'</td></tr>'
                 }
                     }
                  $('#customers').append(html);
                   $('#ticket').append(html1);
 
                 }
+                 $(document).ready(function() {
+                $('#table1').DataTable();
+                $('#table2').DataTable();
+} );
 
             }
 
@@ -42,18 +48,18 @@
 
 
 function comment(id) {
-        document.getElementById('ticket_id1').textContent=id;
-        $('#create').modal('show');
+          window.location.href='/ticket/rply/?id='+id;
+//        document.getElementById('ticket_id1').textContent=id;
+//        $('#create').modal('show');
     }
 
 function closed(id) {
     document.getElementById('ticket_id2').textContent=id;
-    alert(id)
      $.ajax({
         url: '/ticket/close/',
         type: 'POST',
         data: {
-            'ticket_id2':ticket_id2,
+            'ticket_id2':id,
         },
         dataType: 'json',
         success: function (contxt) {
@@ -63,9 +69,7 @@ function closed(id) {
 
                 var Email=contxt.email
                 if(contxt.success==true){
-
-
-                    window.reload()
+                    location.reload()
                     }
 
                 else{

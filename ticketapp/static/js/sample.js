@@ -47,3 +47,6 @@ function signup() {
 }
 
 
+function login2(){
+        window.location.href='/ticket/userlogin/';
+}

@@ -2,6 +2,7 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
+    # url('',views.usersignup,name='usersignup'),
     url('usersignup/',views.usersignup,name='usersignup'),
     url('validate_username',views.validate_username,name='validate_username'),
     url('userlogin/',views.userlogin,name='userlogin'),
@@ -18,4 +19,6 @@ urlpatterns = [
     url('adminlogout',views.adminlogout,name='adminlogout'),
     url('comment',views.comment,name='comment'),
     url('close',views.close,name='close'),
+    url('rply',views.rply,name='rply'),
+    url('z',views.z,name='z')
 ]

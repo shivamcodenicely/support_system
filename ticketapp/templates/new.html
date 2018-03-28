@@ -1,176 +1,175 @@
-<!DOCTYPE html>
-{% load staticfiles %}
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
-<html>
-<head>
-</head>
-<script>
-var email='{{Email}}'
+
+<!DOCTYPE html><html class=''>
+<head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script><script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script><meta charset='UTF-8'><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" /><link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/clemer/pen/xLqaKm?limit=all&page=4&q=uikit" />
+
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/css/uikit.min.css'>
+<style class="cp-pen-styles">.uk-card-small.uk-card-body {
+  padding: 5px 8px;
+  font-size: 13px;
+}
+
+.uk-border-remove {
+  border: 0 none;
+}
+
+textarea {
+  background: none !important;
+  resize: none;
+}
+
+@keyframes dot-anim {
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -6px);
+  }
+  0% {
+    transform: translate(0, 0);
+  }
+}
+.etc i {
+  width: 6px;
+  height: 6px;
+  background: #222;
+  border-radius: 100%;
+  display: inline-block;
+  animation: dot-anim 1s infinite linear;
+  transform: translate(0, 0);
+}
+
+.etc {
+  display: block;
+  position: relative;
+}
+.etc i + i {
+  margin-left: 3px;
+}
+.etc i:nth-child(1) {
+  animation-delay: .5s;
+}
+.etc i:nth-child(2) {
+  animation-delay: .4s;
+}
+.etc i:nth-child(3) {
+  animation-delay: .3s;
+}
+
+.uk-card {
+  position: relative;
+  z-index: 1;
+}
+
+.guest .uk-card:after, .me .uk-card:after {
+  width: 10px;
+  height: 45px;
+  position: absolute;
+  bottom: 0;
+}
+
+.guest .uk-card:after {
+  background: #fff;
+  left: -4px;
+  clip-path: polygon(100% 70%, 0% 100%, 100% 100%);
+}
+
+.me .uk-card:after {
+  background: #1e87f0;
+  right: -4px;
+  clip-path: polygon(0 70%, 0% 100%, 100% 100%);
+}
+</style></head><body>
+<div class="uk-section">
+  <div class="uk-container uk-width-large">
+
+    <button class="uk-button uk-button-default uk-position-top-right uk-margin-small-top uk-margin-small-right" uk-toggle="target: .button-label">
+      <span class="button-label">Turn off the lights</span>
+      <span class="button-label" hidden>Turn on the lights</span>
+    </button>
+
+    <div class="uk-card uk-card-default uk-border-rounded uk-margin-large-top">
+
+      <div class="uk-card-body uk-padding-small">
+
+        <div class="guest uk-grid-small uk-flex-bottom uk-flex-left" uk-grid>
+          <div class="uk-width-auto">
+            <img class="uk-border-circle" width="32" height="32" src="https://getuikit.com/docs/images/avatar.jpg">
+          </div>
+          <div class="uk-width-auto">
+            <div class="uk-card uk-card-body uk-card-small uk-card-default uk-border-rounded">
+              <p class="uk-margin-remove">Hey dude!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="me uk-grid-small uk-flex-bottom uk-flex-right uk-text-right" uk-grid>
+          <div class="uk-width-auto">
+            <div class="uk-card uk-card-body uk-card-small uk-card-primary uk-border-rounded">
+              <p class="uk-margin-remove">Hi brow :)</p>
+              <p class="uk-margin-remove">What's up?</p>
+            </div>
+          </div>
+          <div class="uk-width-auto">
+            <img class="uk-border-circle" width="32" height="32" src="https://getuikit.com/docs/images/avatar.jpg">
+          </div>
+        </div>
+
+        <div class="guest uk-grid-small uk-flex-bottom uk-flex-left" uk-grid>
+          <div class="uk-width-auto">
+            <img class="uk-border-circle" width="32" height="32" src="https://getuikit.com/docs/images/avatar.jpg">
+          </div>
+          <div class="uk-width-auto">
+            <div class="uk-card uk-card-body uk-card-small uk-card-default uk-border-rounded">
+              <p class="uk-margin-remove">
+                <span class="etc"><i></i><i></i><i></i></span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="uk-card-footer uk-padding-remove">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+          <div class="uk-width-auto">
+            <a href="#" class="uk-icon-link uk-margin-small-left" uk-icon="icon: happy"></a>
+          </div>
+          <div class="uk-width-expand">
+            <div class="uk-padding-small uk-padding-remove-horizontal">
+              <textarea class="uk-textarea uk-padding-remove uk-border-remove" rows="1" placeholder="Escreva a mensagem..."></textarea>
+            </div>
+          </div>
+          <div class="uk-width-auto">
+            <ul class="uk-iconnav uk-margin-small-right">
+              <li>
+                <a href="#" uk-icon="icon: image"></a>
+              </li>
+              <li>
+                <a href="#" uk-icon="icon: location"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit-icons.min.js'></script>
+<script >$('.uk-button').on('click', function (){
+  $('.uk-section').toggleClass('uk-dark uk-light');
+
+  $('.uk-container > .uk-card').toggleClass('uk-card-default uk-card-secondary');
+
+  $('html').toggleClass('uk-background-muted uk-background-secondary');
+});
+
+//# sourceURL=pen.js
 </script>
-<script src="{% static 'css/css1.css' %}"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<script  src="{% static 'js/index.js' %}"></script>
-<header>
-
-  <div class="container" style="width:100%">
-  <div class="jumbotron" style="padding-top: 10px;padding-bottom: 29px;">
-    <h1 style="padding-top:-33px;">Welcome {{Email}}</h1>
-    <p>Support System</p>
-  </div>
-</div>
-
-</header>
-
-
-<body>
-<button type="button"  style="margin-left:2%;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Create Ticket</button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content" style="padding: 30px;">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="moholder">
-          <div class="row">
-      <div class="col-25">
-        <label for="ticket_id">Ticket ID</label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="ticket_id" name="ticket_id" placeholder="Ticket ID">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="category">Category</label>
-      </div>
-      <div class="col-75">
-        <select id="category" name="category">
-          <option value="0">Low</option>
-          <option value="1">Medium</option>
-          <option value="2">High</option>
-        </select>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="subject">Subject</label>
-      </div>
-      <div class="col-75">
-        <textarea id="subject" name="subject" placeholder="Subject" style="height:30px;width:300px"></textarea>
-      </div>
-    </div>
-
-      <div class="row">
-      <div class="col-25">
-        <label for="description">Description</label>
-      </div>
-      <div class="col-75">
-        <textarea id="description" name="description" placeholder="Write something.." style="height:200px;width:500px"></textarea>
-      </div>
-    </div>
-    <div class="row">
-      <input type="submit" onclick="create_ticket()">
-    </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal" >Close</button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="tab" role="tabpanel">
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">Section 1</a></li>
-                    <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab">Section 2</a></li>
-<!--                    <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">Section 3</a></li>-->
-                </ul>
-                <!-- Tab panes -->
-                <div class="tab-content tabs">
-                    <div role="tabpanel" class="tab-pane fade in active" id="Section1">
-                      <div class="card">
-                        <div class="card-body">
-                          <table id="customers" style="border-spacing: 5px; padding-7px" border="1px">
-	                        <thead>
-                              <tr style=" background-color:#79aec8; margin-left: 300px;">
-                                <th>Ticket ID</th>
-	                            <th>Category</th>
-                                <th>Subject</th>
-                                <th>Description</th>
-                              </tr>
-                            </thead>
-                            <tbody name="customer">
-                            <!--<tr>-->
-                              <!--<td>Ticket ID 1</td>-->
-                              <!--<td>Laptop</td>-->
-                              <!--<td>Damange</td>-->
-                            <!--<td>Open</td>-->
-                            <!--</tr>-->
-                          </tbody>
-                          </table>
-                        </div>
-                      </div>  
-    
-                    </div>
-                    <div role="tabpanel" class="tab-pane fade" id="Section2">
-                        <div class="card">
-                        <div class="card-body">
-                          <table id="ticket" style="border-spacing: 5px; padding-7px" border="1px">
-	                        <thead>
-                              <tr style=" background-color:#79aec8; margin-left: 300px;">
-                                <th>Ticket ID</th>
-	                            <th>Category</th>
-                                <th>Subject</th>
-                                <th>Description</th>
-                              </tr>
-                            </thead>
-                            <tbody name="ticket">
-                            <!--<tr>-->
-                              <!--<td>Ticket ID 1</td>-->
-                              <!--<td>Laptop</td>-->
-                              <!--<td>Damange</td>-->
-                            <!--<td>Open</td>-->
-                            <!--</tr>-->
-                          </tbody>
-                          </table>
-                        </div>
-                      </div> 
-                    </div>
-<!--                    <div role="tabpanel" class="tab-pane fade" id="Section3">-->
-<!--                        <h3>Section 3</h3>-->
-<!--                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec urna aliquam, ornare eros vel, malesuada lorem. Nullam faucibus lorem at eros consectetur lobortis. Maecenas nec nibh congue, placerat sem id, rutrum velit. Phasellus porta enim at facilisis condimentum. Maecenas pharetra dolor vel elit tempor pellentesque sed sed eros. Aenean vitae mauris tincidunt, imperdiet orci semper, rhoncus ligula. Vivamus scelerisque.</p>-->
-<!--                    </div>-->
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<script src="{% static 'js/userhome.js' %} "></script>
-<script src="{% static 'js/create_ticket.js' %} "></script>
-
-</body>
-<footer>
-
-  <div class="container" style="width:100%" align="center">
-  <div class="jumbotron" style="padding-top: 10px;padding-bottom: 29px;">
-    <p>Thanks for your visit</p>
-  </div>
-</div>
-
-</footer>
-</html>
+</body></html>

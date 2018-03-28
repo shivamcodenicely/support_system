@@ -30,7 +30,7 @@ CHOICES = (
 )
 class TicketDetail(models.Model):
     user=models.ForeignKey(Signup,on_delete=models.CASCADE)
-    ticket_id=models.IntegerField(primary_key=True, default=0)
+    ticket_id=models.AutoField(primary_key=True)
     catagory=models.IntegerField(choices=CHOICES,blank=False,null=False)
     subject=models.CharField(max_length=50,blank=False,null=False)
     description=models.CharField(max_length=256)
@@ -41,3 +41,15 @@ class TicketDetail(models.Model):
     comment=models.CharField(max_length=256,null=True,blank=True)
     def __str__(self):
         return "%s" % (self.user)
+
+
+class CommentBox(models.Model):
+    admin=models.ForeignKey(AdminSignup,on_delete=models.CASCADE,null=True,blank=True)
+    user=models.ForeignKey(Signup,on_delete=models.CASCADE,null=True,blank=True)
+    ticket=models.ForeignKey(TicketDetail,on_delete=models.CASCADE,null=True,blank=True)
+    message=models.TextField(max_length=256,null=True,blank=True)
+    created=models.DateTimeField(auto_now=False,auto_now_add=True,null=True,blank=True)
+    msg_flag=models.BooleanField(default=True)
+
+    def __str__(self):
+        return "%s" % (self.comment)

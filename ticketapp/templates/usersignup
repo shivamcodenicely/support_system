@@ -30,19 +30,29 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
 </head>
+<header style="width:100%;">
+
+  <div class="container" style="width:100%;padding:0; margin-left:0;max-width: 100%;">
+  <div class="jumbotron" style="padding-top: 10px;background-color:#26C1DE;padding-left:0;width:100%;">
+
+    <h1 style="padding-top:-33px; font-size: 2.5rem;color:#FFFFFF;margin-left:2%">Support System</h1>    <!--<p>Support System</p>-->
+  </div>
+</div>
+
+</header>
     <div class="container">
-<legend><center><h2><b>Registration Form</b></h2></center></legend><br>
+<legend><center><h2 style="font-size: 1.5rem; "><b>Registration Form</b></h2></center></legend><br>
 		<script src="{% static 'js/sample.js' %} "></script>
 
 
 
- <div class="limiter">
-    <div class="container-login100">
+ <div class="limiter" style="width:60%;">
+    <div class="container-login100" style="min-height: 78vh;width: 80%;margin-left: 11%;">
 			<div class="wrap-login100">
 <div class="form-group">
     <div class="wrap-input100 validate-input" >
 
-						<input class="input100"  name="first_name" id="name">
+						<input class="input100"  name="first_name" id="name" required>
 						<span class="focus-input100" data-placeholder="Name" id="name"></span>
 					</div>
             </div>
@@ -112,25 +122,25 @@
 
 <div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
-							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn" onclick="signup()">
-								Signup
-							</button>
+							<!--<div class="login100-form-bgbtn" ></div>-->
+							<button type="button" class="btn btn-info" style="margin-left:38%;" onclick="signup()">Signup</button>
+							<!--<button class="login100-form-btn" onclick="signup()">-->
+								<!--Signup-->
+							<!--</button>-->
 						</div>
 </div>
+<!--<button type="button" class="btn btn-link" style="margin-left: 21%;margin-bottom: -8%;" onclick="login2()">Already have a account</button>-->
 
-
-					<div class="text-center p-t-115">
+					<div class="text-center p-t-30">
                     </div>
+
+
+				<span class="psw" style="margin-left:25%;"><a href="/ticket/userlogin/">Already have an account</a></span>
     </div>
 
 
-
-
-
-
-
         <div id="dropDownSelect1"></div>
+
 
 <!--===============================================================================================-->
 	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
@@ -148,8 +158,20 @@
 	<script src="{% static 'vendor/countdowntime/countdowntime.js' %}"></script>
 <!--===============================================================================================-->
 	<script src="{% static 'js/main.js' %}"></script>
+
 </div>
 
     </div>
 	</div><!-- /.container -->
+<div class="text-center p-t-30">
+                    </div>
+
+<footer>
+
+  <div class="container" style="width:100%;padding:0; margin:0;max-width: 100%;" align="center">
+  <div class="jumbotron" style="padding-top: 10px;padding-left:0;width:100%;background-color:#26C1DE; margin:0;">
+     <p>Thanks for your visit</p>
+  </div>
+</div>
+</footer>
 </html>

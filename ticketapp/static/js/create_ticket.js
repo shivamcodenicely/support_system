@@ -1,6 +1,5 @@
 
 function create_ticket() {
-    alert(email);
     var ticket_id = document.getElementById('ticket_id').value;
     var category = document.getElementById('category').value;
     var subject = document.getElementById('subject').value;
@@ -23,7 +22,6 @@ function create_ticket() {
         dataType: 'json',
 
         success: function (contxt) {
-                 alert('success');
                  console.log(contxt)
                 if(contxt.success==true){
 //                    window.location.href = '/ticket/userhome/';
