@@ -20,5 +20,6 @@ urlpatterns = [
     url('comment',views.comment,name='comment'),
     url('close',views.close,name='close'),
     url('rply',views.rply,name='rply'),
-    url('z',views.z,name='z')
+    # url('z',views.z,name='z'),
+    url('z',views.adminrply,name='adminrply'),
 ]

@@ -13,5 +13,5 @@ class TicketAdmin(admin.ModelAdmin):
 admin.site.register(TicketDetail,TicketAdmin)
 
 class CommentBoxAdmin(admin.ModelAdmin):
-    list_display = ('admin','user','message','created')
+    list_display = ('admin','ticket','user','message','created')
 admin.site.register(CommentBox,CommentBoxAdmin)

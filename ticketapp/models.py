@@ -19,6 +19,8 @@ class Signup(models.Model):
 class AdminSignup(models.Model):
     username=models.CharField(max_length=50 ,null=False)
     password=models.CharField(max_length=50,null=False)
+    profile_picture = models.ImageField(null=True, blank=True, upload_to='')
+
     def __str__(self):
         return "%s" % (self.username)
 
@@ -40,7 +42,7 @@ class TicketDetail(models.Model):
     status=models.BooleanField(default=False)
     comment=models.CharField(max_length=256,null=True,blank=True)
     def __str__(self):
-        return "%s" % (self.user)
+        return "%s" % (self.ticket_id)
 
 
 class CommentBox(models.Model):
@@ -52,4 +54,4 @@ class CommentBox(models.Model):
     msg_flag=models.BooleanField(default=True)
 
     def __str__(self):
-        return "%s" % (self.comment)
+        return "%s" % (self.ticket)

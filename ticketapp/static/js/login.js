@@ -1,7 +1,12 @@
 function login() {
     var pwd = document.getElementById('pwd').value;
     var email = document.getElementById('email').value;
-
+    if(email==""){
+    alert("Please enter the email")
+    return false}
+    if(pwd==""){
+    alert("Please enter the password")
+    return false}
     $.ajax({
         url: '/ticket/validate/',
         type: 'POST',
@@ -22,6 +27,7 @@ function login() {
                     }
 
                 else{
+
                     alert("Email ID OR Password Incorrect")
                 }
             }
@@ -54,9 +60,15 @@ function forget() {
 
 
 function login1() {
-    var password = document.getElementById('password').value;
     var username = document.getElementById('username').value;
-
+    if(username==""){
+    alert("Please enter the username")
+    return false
+    }
+    var password = document.getElementById('password').value;
+    if(password==""){
+    alert("please enter password")
+    return false}
     $.ajax({
         url: '/ticket/myview/',
         type: 'POST',

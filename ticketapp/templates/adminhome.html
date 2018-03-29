@@ -21,17 +21,26 @@
 <script  src="{% static 'js/index.js' %}"></script>
 <header style="width:100%;">
 <div class="container" style="width:100%;padding:0; margin-left:0;max-width: 100%;">
-  <div class="jumbotron" style="padding-top: 10px;background-color:#26C1DE;padding-left:0;width:100%;">
+  <div class="jumbotron" style="background-color:#26C1DE;padding-left:0;width:100%;">
 
     <h1 style="padding-top:-33px; font-size: 2.5rem;color:#FFFFFF;margin-left:2%">Support System</h1>
-      <span class="psw" style="color:##FFFFFF; margin-left:85%"><a href="/ticket/userlogout/" style="padding-left:2%"> LOGOUT</a></span>
+      <span class="psw" style="color:##FFFFFF; margin-left:85%"><a href="/ticket/adminlogout/" style="padding-left:2%"> LOGOUT</a></span>
       <!--<p>Support System</p>-->
   </div>
 </div>
 
 </header>
 
+
+<script>
+	var username='{{username}}'
+</script>
+
+
 <body style="font-size: 1.4rem;">
+<span id="username" style="display: none;">{{username}}</span>
+<span id="id" style="display: none;">{{contxt.id}}</span>
+
 
 <div class="container">
     <div class="row">
@@ -108,7 +117,7 @@
                 <th>Close Ticket</th>
             </tr>
         </thead>
-        <tbody id="customers">
+        <tbody id="customers" style="text-align:center;">
             <!--<tr>-->
                 <!--<td></td>-->
                 <!--<td></td>-->
@@ -202,7 +211,7 @@
 <div class="container" style="width:100%;padding:0; margin:0;max-width: 100%;" align="center">
   <div class="jumbotron" style="padding-top: 10px;padding-left:0;width:100%;background-color:#26C1DE; margin:0;">
 
-    <p>Thanks for your visit</p>
+    <p style="color:#fff">Copyright © 2018 Code Nicely</p>
   </div>
 </div>
 </footer>

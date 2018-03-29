@@ -4,12 +4,15 @@
         url: '/ticket/adminload/',
         type: 'GET',
         dataType: 'json',
+        data: {'username':username},
+
 
         success: function (contxt) {
         var html="";
         var html1="";
             {
-                console.log(contxt.ticket_list)
+                console.log(username);
+
                 for(var i=0;i<contxt.ticket_list.length;i++)
                 {
                 var data=contxt.ticket_list[i].status;
@@ -19,15 +22,16 @@
                 var d=contxt.ticket_list[i].description;
                 var d1=contxt.ticket_list[i].created;
 
-                var e="CLOSE";
+                var e="<button type='button'style= 'background-color: #008CBA;'>Close</button>";
+                var f=username;
 
                 if(data==true)
                 {
-                html+='<tr><td onclick="comment('+a+')">'+a+'</td><td>'+b+'</td><td>'+c+'</td><td>'+d+'</td><td>'+d1+'</td><td onclick="closed('+a+')">'+e+'</td></tr>'
+                html+='<tr style="cursor:pointer;"><td onclick="comment('+a+',\''+f+'\')">'+a+'</td><td onclick="comment('+a+')">'+b+'</td><td onclick="comment('+a+')">'+c+'</td><td onclick="comment('+a+')">'+d+'</td><td onclick="comment('+a+')">'+d1+'</td><td onclick="closed('+a+')">'+e+'</td></tr>'
                 }
 
                 else{
-                    html1+='<tr><td onclick="comment('+a+')">'+a+'</td><td>'+b+'</td><td>'+c+'</td><td>'+d+'</td><td>'+d1+'</td></tr>'
+                    html1+='<tr style="cursor:pointer;"><td onclick="comment('+a+')">'+a+'</td><td onclick="comment('+a+')">'+b+'</td><td onclick="comment('+a+')">'+c+'</td><td onclick="comment('+a+')">'+d+'</td><td onclick="comment('+a+')">'+d1+'</td></tr>'
                 }
                     }
                  $('#customers').append(html);
@@ -46,15 +50,14 @@
     });
 });
 
-function comment(id) {
-        window.location.href='/ticket/rply/?id='+id;
+function comment(id,username) {
+        window.location.href='/ticket/z/?id='+id + "&username=" + username;
 //        document.getElementById('ticket_id2').textContent=id;
 //        $('#create').modal('show');
 
 }
 
 function closed(id){
-    alert('hello')
  document.getElementById('ticket_id2').textContent=id;
     $.ajax({
         url: '/ticket/close/',
@@ -66,8 +69,6 @@ function closed(id){
         dataType: 'json',
 
         success: function (contxt) {
-                 alert('success');
-                 console.log(contxt)
                 if(contxt.success==true){
                 location.reload()
                 }

@@ -3,10 +3,8 @@
 {% load staticfiles %}
 
 <html>
-<title>User Comment</title>
+<title>Admin Comment</title>
 <head>
-
-
 </head>
 <script>
 var id='{{id}}'
@@ -38,21 +36,20 @@ var email='{{email}}'
   <div class="jumbotron" style="padding-top: 10px;background-color:#26C1DE;padding-left:0;width:100%;">
 
     <h1 style="padding-top:-33px; font-size: 2.5rem;color:#FFFFFF;margin-left:2%">Support System</h1>
-      <span class="psw" style="color:##FFFFFF; margin-left:85%"><a href="/ticket/userlogout/" style="padding-left:11%"> LOGOUT</a></span><!--<p>Support System</p>-->
+      <span class="psw" style="color:##FFFFFF; margin-left:85%"><a href="/ticket/adminlogout/" style="padding-left:11%"> LOGOUT</a></span>
+      <!--<p>Support System</p>-->
   </div>
 </div>
 
 </header>
-<script src="{% static 'js/chatbox.js' %}"></script>
+<script src="{% static 'js/comment.js' %}"></script>
 
 <body>
-
-
-<span id="email" style="display: none;">{{contxt.email}}</span>
+<span id="username" style="display: none;">{{contxt.username}}</span>
 
 <div class="card" style="width:40%;margin-left:29%;">
   <ul class="list-group list-group-flush">
-      <li class="list-group-item" style="font-weight: bold; " >Ticket ID       : <span id="ticket_id3">{{contxt.ticket_id}}</span></li>
+      <li class="list-group-item" style="font-weight: bold; " >Ticket ID    : #<span id="ticket_id3">{{contxt.ticket_id}}</span></li>
     <li class="list-group-item" style="font-weight: bold;">Category   :   {{contxt.catagery}}</li>
     <li class="list-group-item" style="font-weight: bold;">Subject   :    {{contxt.subject}}</li>
     <li class="list-group-item" style="font-weight: bold;">Description  :  {{contxt.description}}</li>
@@ -62,7 +59,7 @@ var email='{{email}}'
  </ul>
 </div>
 
-<div class="uk-section">
+<div class="uk-section" style="100%;">
   <div class="uk-container uk-width-large" style="margin-left:6.5%;margin-top: -12%; width:100%;" >
 
     <button class="uk-button uk-button-default uk-position-top-right uk-margin-small-top uk-margin-small-right" uk-toggle="target: .button-label">
@@ -74,48 +71,39 @@ var email='{{email}}'
 
       <div class="uk-card-body uk-padding-small">
         {% for i in msg1 %}
+
           {% if i.msg_flag %}
-        <div class="guest uk-grid-small uk-flex-bottom uk-flex-left" uk-grid>
+
+          <div class="me uk-grid-small uk-flex-bottom uk-flex-right uk-text-right" uk-grid>
+          <div class="uk-width-auto">
+            <div class="uk-card uk-card-body uk-card-small uk-card-primary uk-border-rounded " style="margin-top: 5%;padding: 5px 8px;">
+              <p class="uk-margin-remove">{{i.message}}</p>
+
+            </div>
+          </div>
           <div class="uk-width-auto">
             <img class="uk-border-circle" width="32" height="32" src="{% static 'img/admin.jpeg' %}">
           </div>
-          <div class="uk-width-auto">
-            <div class="uk-card uk-card-body uk-card-small uk-card-default uk-border-rounded" style="padding: 5px 8px;background-color: #EBEBEB;margin-top:5%;">
-
-
-              <p class="uk-margin-remove">{{i.message}}</p>
-
-
-            </div>
-
-          </div>
 
         </div>
-          <p class="uk-margin-remove"style="font-size: 65%;">{{i.created}}</p>
-            {% else %}
+          <p class="uk-margin-remove" style="font-size: 65%;padding-left:69%;padding-top: 1%;">{{i.created}}</p>
 
-        <div class="me uk-grid-small uk-flex-bottom uk-flex-right uk-text-right" uk-grid>
 
-          <div class="uk-width-auto">
-
-            <div class="uk-card uk-card-body uk-card-small uk-card-primary uk-border-rounded"style="margin-top: 5%;padding: 5px 8px;">
-
-              <p class="uk-margin-remove">{{i.message}}</p>
-
-            </div>
-
-          </div>
-
+             {% else %}
+        <div class="guest uk-grid-small uk-flex-bottom uk-flex-left" uk-grid>
           <div class="uk-width-auto">
             <img class="uk-border-circle" width="32" height="32" src="{{profile_picture}}">
-
           </div>
-
-
+          <div class="uk-width-auto">
+            <div class="uk-card uk-card-body uk-card-small uk-card-default uk-border-rounded" style="background-color: #EBEBEB;padding: 5px 8px;">
+              <p class="uk-margin-remove">{{i.message}}</p>
+            </div>
+          </div>
         </div>
-        <p class="uk-margin-remove" style="font-size: 65%;padding-left: 76%;padding-top: 1%;">{{i.created}}</p>
-        {% endif %}
+          <p class="uk-margin-remove" style="font-size: 65%;padding-top:1%;padding-left: 0%;">{{i.created}}</p>
+             {% endif %}
 {%endfor%}
+
         <!--<div class="guest uk-grid-small uk-flex-bottom uk-flex-left" uk-grid>-->
           <!--<div class="uk-width-auto">-->
             <!--<img class="uk-border-circle" width="32" height="32" src="https://getuikit.com/docs/images/avatar.jpg">-->
@@ -141,7 +129,7 @@ var email='{{email}}'
               <textarea class="uk-textarea uk-padding-remove uk-border-remove" id="comment" rows="1" placeholder="Write a message..."></textarea>
             </div>
           </div>
-            <button type="button" class="btn btn-info" style="margin-left:12%;font-size: 73%;margin-right: 3%;" onclick="chat1()">SEND</button>
+            <button type="button" class="btn btn-info" style="margin-left:12%;font-size: 73%;margin-right: 3%;" onclick="chat2()">SEND</button>
 
           <!--<div class="uk-width-auto">-->
 

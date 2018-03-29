@@ -25,10 +25,10 @@ def validate_username(request):
         address=request.POST.get('address')
         city=request.POST.get('city')
         zipcode = request.POST.get('zipcode')
-        # profile_picture=request.FILES('profile_picture')
+        profile_picture=request.FILES.get('profile_picture')
 
         emp = Signup.objects.create(name=name, username=username, email=email,password=pwd,contact=contact,
-                                    address=address,city=city,zipcode=zipcode)
+                                    address=address,city=city,zipcode=zipcode,profile_picture=profile_picture)
 
         emp.save()
 
@@ -56,9 +56,9 @@ def validate(request):
             request.session['email'] = email
             return JsonResponse({"email": email, "success": True})
         else:
-            print("ppppppppp")
             return JsonResponse({"success": False})
 
+@csrf_exempt
 def userhome(request):
     ticket_list1=[]
 
@@ -66,10 +66,9 @@ def userhome(request):
 
         email = request.GET.get('email')
         data = Signup.objects.get(email=email)
-        # print(data)
         data1 = TicketDetail.objects.filter(user=data)
-        # print(data1)
-
+        # key='secret'
+        # encoded = jwt.encode({'email':email},key, algorithm='HS256')
         for i in data1:
             contxt = {
                 'ticket_id': i.ticket_id,
@@ -79,9 +78,11 @@ def userhome(request):
                 'status': i.status,
                 'created': (i.created.date().strftime('%d/%m/%Y'))
             }
+
             ticket_list1.append(contxt)
             ticket_list1 = sorted(ticket_list1, key=lambda contxt: contxt['created'])
-        return JsonResponse({"success": True, 'ticket_list1': ticket_list1})
+
+        return JsonResponse({"success": True, 'ticket_list1': ticket_list1,'Email':email})
 
     elif request.method == "GET":
         email=request.GET.get('Email')
@@ -99,10 +100,8 @@ def my_view(request):
     data = AdminSignup.objects.get(username=username)
     pwd=data.password
     if(password==pwd):
-        print("success")
         return JsonResponse({"username": username, "success": True})
     else:
-        print("invalid")
         return JsonResponse({"success": False})
 
 
@@ -115,8 +114,8 @@ def my_view(request):
     #     print("Sucsess")
     # else:
     #     print("Not suceess"
-def adminhome(request):
-    return render(request,'adminhome.html')
+
+
 @csrf_exempt
 def new2(request):
     if request.method=='POST':
@@ -133,10 +132,17 @@ def new2(request):
 
 
 
+def adminhome(request):
+    if request.method=='GET':
+        username=request.GET.get('Username')
+    return render(request,'adminhome.html',{'username':username})
+
+
 def adminload(requset):
         ticket_list = []
         data = TicketDetail.objects.all()
         if requset.method=="GET":
+            username=requset.GET.get('username')
             for i in data:
                 contxt={
                     'ticket_id':i.ticket_id,
@@ -148,7 +154,7 @@ def adminload(requset):
                 }
                 ticket_list.append(contxt)
                 ticket_list=sorted(ticket_list, key=lambda contxt: contxt['created'])
-        return JsonResponse({"success": True, 'ticket_list':ticket_list})
+        return JsonResponse({"success": True, 'ticket_list':ticket_list,'username':username})
 
 
 # def userload(requset):
@@ -188,11 +194,10 @@ def create_ticket(request):
         return JsonResponse({"success": True})
 
 def adminlogout(requset):
-    del requset.session['email']
+
     return render(requset,'adminlogin.html')
 
 def userlogout(requset):
-
     return  render(requset,'userlogin.html')
 
 @csrf_exempt
@@ -210,7 +215,6 @@ def comment(request):
 def close(request):
     if request.method=="POST":
         ticket_id2=request.POST.get('ticket_id2')
-        print(ticket_id2)
         data1=TicketDetail.objects.get(ticket_id=ticket_id2)
         data1.status=False
         data1.save()
@@ -221,22 +225,78 @@ def rply(request):
     contxt ={}
     if request.method=='GET':
         id=request.GET.get('id')
+        email=request.GET.get('email')
+
         data1=TicketDetail.objects.get(ticket_id=id)
+
         contxt={ 'ticket_id':data1.ticket_id,
-                 'catagery':data1.catagory,
+                 'catagery':data1.get_catagory_display(),
                  'subject': data1.subject,
                  'description':data1.description,
+                 'email':email,
+
         }
+        print (contxt)
+        data2=CommentBox.objects.filter(ticket=id)
+        data1=Signup.objects.get(email=email)
+        profile_picture=(data1.profile_picture)
+        profile_picture= request.scheme + "://" + request.get_host() + '/media/' + str(profile_picture)
+
+        msg1=[]
+        for i in data2:
+
+            msg={'message': i.message,
+                 'created': i.created,
+                 'msg_flag': i.msg_flag,
+
+                 }
+            msg1.append(msg)
+        return render(request, 'comment.html', {'contxt': contxt,'msg1': msg1,'profile_picture':profile_picture})
 
     elif request.method=="POST":
+        email=request.POST.get('email')
         ticket_id1=request.POST.get('ticket_id1')
-        comment=request.POST.get('comment')
-        data1=TicketDetail.objects.get(ticket_id=ticket_id1)
-        data2=CommentBox.objects.get(user=data1)
+        message=request.POST.get('comment')
+
+        data2=TicketDetail.objects.get(ticket_id=ticket_id1)
+        CommentBox.objects.create(user=data2.user, message=message,ticket=data2,msg_flag=False)
+
+        return render(request,'comment.html')
 
 
-        data3=CommentBox.objects.get(admin=data1)
-        # CommentBox.objects.create(comment=comment)
+@csrf_exempt
+def adminrply(request):
+    if request.method=='GET':
+        id=request.GET.get('id')
+        username=request.GET.get('username')
+        data1=TicketDetail.objects.get(ticket_id=id)
 
+        profile_picture=data1.user.profile_picture
+        profile_picture = request.scheme + "://" + request.get_host() + '/media/' + str(profile_picture)
+        contxt={ 'ticket_id': data1.ticket_id,
+                 'catagery': data1.get_catagory_display(),
+                 'subject': data1.subject,
+                 'description':data1.description,
+                 'username':username,
+        }
 
-    return render(request,'comment.html',{'contxt':contxt})
+        data2 = CommentBox.objects.filter(ticket=id)
+        msg1 = []
+        for i in data2:
+            msg = {'message': i.message,
+                   'created': i.created,
+                   'msg_flag':i.msg_flag,
+                   }
+            msg1.append(msg)
+        return render(request,'adminrply.html',{'contxt': contxt, 'msg1': msg1,'profile_picture':profile_picture})
+
+    elif request.method=="POST":
+        username=request.POST.get('username')
+        ticket_id1=request.POST.get('ticket_id1')
+        message=request.POST.get('comment')
+
+        data2 = TicketDetail.objects.get(ticket_id=ticket_id1)
+        data1=AdminSignup.objects.get(username=username)
+        CommentBox.objects.create(admin=data1, message=message,ticket=data2,msg_flag=True)
+    return render(request,'adminrply.html')
+

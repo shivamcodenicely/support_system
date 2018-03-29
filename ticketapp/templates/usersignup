@@ -141,7 +141,7 @@
 
         <div id="dropDownSelect1"></div>
 
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!--===============================================================================================-->
 	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
 <!--===============================================================================================-->
@@ -170,7 +170,7 @@
 
   <div class="container" style="width:100%;padding:0; margin:0;max-width: 100%;" align="center">
   <div class="jumbotron" style="padding-top: 10px;padding-left:0;width:100%;background-color:#26C1DE; margin:0;">
-     <p>Thanks for your visit</p>
+     <p><p style="color:#fff">Copyright © 2018 Code Nicely</p></p>
   </div>
 </div>
 </footer>

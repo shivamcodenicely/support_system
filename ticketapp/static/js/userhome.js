@@ -10,8 +10,9 @@
         success: function (contxt) {
         var html="";
         var html1="";
-            {
-                console.log(contxt.ticket_list1)
+                var f=contxt.Email;
+            {   console.log(contxt);
+                console.log(contxt.ticket_list1);
                 for(var i=0;i<contxt.ticket_list1.length;i++)
                 {
                 var data=contxt.ticket_list1[i].status;
@@ -20,16 +21,16 @@
                 var c=contxt.ticket_list1[i].subject;
                 var d=contxt.ticket_list1[i].description;
                 var d1=contxt.ticket_list1[i].created;
-                var e="CLOSE";
+                var e="<button type='button'style= 'background-color: #008CBA;'>Close</button>";
 
 
                 if(data==true)
                 {
-                html+='<tr><td onclick="comment('+a+')">'+a+'</td><td>'+b+'</td><td>'+c+'</td><td>'+d+'</td><td>'+d1+'</td><td onclick="closed('+a+')">'+e+'</td></tr>'
+                html+='<tr style="cursor:pointer;"><td onclick="comment('+a+',\''+f+'\')">'+a+'</td><td onclick="comment('+a+',\''+f+'\')">'+b+'</td><td onclick="comment('+a+',\''+f+'\')">'+c+'</td><td onclick="comment('+a+',\''+f+'\')">'+d+'</td><td onclick="comment('+a+',\''+f+'\')">'+d1+'</td><td onclick="closed('+a+')">'+e+'</td></tr>'
                 }
 
                 else{
-                    html1+='<tr><td onclick="comment('+a+')">'+a+'</td><td>'+b+'</td><td>'+c+'</td><td>'+d+'</td><td>'+d1+'</td></tr>'
+                    html1+='<tr style="cursor:pointer;"><td onclick="comment('+a+')">'+a+'</td><td onclick="comment('+a+',\''+f+'\')">'+b+'</td><td onclick="comment('+a+',\''+f+'\')">'+c+'</td><td onclick="comment('+a+',\''+f+'\')">'+d+'</td><td onclick="comment('+a+',\''+f+'\')">'+d1+'</td></tr>'
                 }
                     }
                  $('#customers').append(html);
@@ -47,8 +48,10 @@
 });
 
 
-function comment(id) {
-          window.location.href='/ticket/rply/?id='+id;
+function comment(id,email) {
+
+          window.location.href='/ticket/rply/?id='+id + "&email=" + email ;
+
 //        document.getElementById('ticket_id1').textContent=id;
 //        $('#create').modal('show');
     }
@@ -64,7 +67,6 @@ function closed(id) {
         dataType: 'json',
         success: function (contxt) {
             {
-                console.log(contxt)
                 console.log(contxt.success)
 
                 var Email=contxt.email

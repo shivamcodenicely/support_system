@@ -63,8 +63,8 @@ textarea {
 }
 
 .guest .uk-card:after {
-  background: #fff;
-  left: -4px;
+  background: #ebebeb;
+  left: -6px;
   clip-path: polygon(100% 70%, 0% 100%, 100% 100%);
 }
 

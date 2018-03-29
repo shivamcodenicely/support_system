@@ -1,20 +1,21 @@
-function reply() {
-    var ticket_id=document.getElementById('ticket_id1').textContent;
+function chat2() {
+    var ticket_id1=document.getElementById('ticket_id3').textContent;
+    var username=document.getElementById('username').textContent;
     var comment = document.getElementById('comment').value;
 
     $.ajax({
-        url: '/ticket/comment/',
+        url: '/ticket/z/',
         type: 'POST',
         data: {
-            'ticket_id1':ticket_id,
-            'email':email,
+            'username':username,
+            'ticket_id1':ticket_id1,
             'comment':comment,
+
 
         },
         dataType: 'json',
 
         success: function (contxt) {
-                 console.log(contxt)
                 if(contxt.success==true){
                 location.reload()
                 }
